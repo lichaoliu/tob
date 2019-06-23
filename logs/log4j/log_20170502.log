@@ -1,8 +1,0 @@
-2017-05-02 10:43:57.584  INFO com.cndym.adapter.tms.examine.impl.Ex1071501:examina(25) - number:02,05,04;item=1
-2017-05-02 10:44:18.208  INFO com.cndym.adapter.tms.examine.impl.Ex1071501:examina(25) - number:02,05,04;item=3
-2017-05-02 10:58:31.697  INFO com.cndym.adapter.tms.examine.impl.Ex1071501:examina(25) - number:02,05,04;item=3
-2017-05-02 10:59:10.606  INFO com.cndym.adapter.tms.examine.impl.Ex1071501:examina(25) - number:02,05,04;item=3
-2017-05-02 10:59:55.982  INFO com.cndym.adapter.tms.examine.impl.Ex1071501:examina(25) - number:02,05,04;item=3
-2017-05-02 11:00:38.629  INFO com.cndym.adapter.tms.examine.impl.Ex1071601:examina(25) - number:02,07,04,05;item=5
-2017-05-02 11:01:22.545  INFO com.cndym.adapter.tms.examine.impl.Ex1071701:examina(25) - number:01,02,08,04,05;item=7
-2017-05-02 11:01:33.199  INFO com.cndym.adapter.tms.examine.impl.Ex1071701:examina(25) - number:01,02,08,04,05,06;item=7
