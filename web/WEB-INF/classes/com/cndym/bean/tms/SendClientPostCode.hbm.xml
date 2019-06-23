@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.SendClientPostCode" table="TMS_SEND_CLIENT_POST_CODE">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_SEND_CLIENT_POST_CODE</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="30"/>
+        <property name="postCode" column="POST_CODE" type="java.lang.String"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="2" />
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.count.DayTicketTable" table="COUNT_DAY_TICKET_TABLE">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_COUNT_DAY_TICKET_TABLE</param>
+            </generator>
+        </id>
+        <property name="postCode" column="POST_CODE" type="java.lang.String" length="20"/>
+        <property name="curDate" column="CUR_DATE" type="java.lang.String" length="20"/>
+        <property name="successTicket" column="SUCCESS_TICKET" type="java.lang.Long"/>
+        <property name="successAmount" column="SUCCESS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="waitTicket" column="WAIT_TICKET" type="java.lang.Long"/>
+        <property name="waitAmount" column="WAIT_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="failureTicket" column="FAILURE_TICKET" type="java.lang.Long"/>
+        <property name="failureAmount" column="FAILURE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusTicket" column="BONUS_TICKET" type="java.lang.Long"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

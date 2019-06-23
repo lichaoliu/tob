@@ -1,0 +1,23 @@
+<message>
+	<header>
+		<sid><![CDATA[800001]]></sid>
+		<cmd><![CDATA[011]]></cmd>
+		<digestType><![CDATA[md5]]></digestType>
+		<digest><![CDATA[db11e558c6ae102bb739f78a76c5130b]]></digest>
+	</header>
+	<body>
+		<response code="0000" msg="系统处理成功">
+			<ticket ticketId="100000000007" sysId="31114152518122400842" orderId="4000000000007" lotteryId="200" issue="20121114" amount="18.00"
+				status="2" msg="交易成功" bonusStatus="0" bonusAmount="0.00" fixBonusAmount="0.00" printTime="2012-11-14 15:33:00">
+				<odds><![CDATA[SPF|121114001(0)=3(1.83)/1(3.05)/0(4.00),121114002(0)=3(7.80)/1(3.85)/0(1.36)|2*1]]></odds>
+				<bonusClass></bonusClass>
+			</ticket>
+			<ticket ticketId="1" status="999" msg="订单不存在"></ticket>
+			<ticket ticketId="2" status="999" msg="订单不存在"></ticket>
+			<ticket ticketId="3" status="999" msg="订单不存在"></ticket>
+			<ticket ticketId="4" status="999" msg="订单不存在"></ticket>
+			<ticket ticketId="5" status="999" msg="订单不存在"></ticket>
+			<ticket ticketId="6" status="999" msg="订单不存在"></ticket>
+		</response>
+	</body>
+</message>

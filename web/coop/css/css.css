@@ -1,0 +1,11 @@
+@charset "utf-8";
+body { font: 12px Arial, Helvetica, sans-serif; color: #000; background: #fff; margin: 2px; padding: 0px; }
+.btn { font-size: 12px; line-height: 25px; color: #FFF; background: url(../images/btn_bg.gif) no-repeat; margin: 10px; padding: 0px; height: 25px; width: 70px; cursor:pointer; border: none; }
+.btn1 { font-size: 12px; line-height: 24px; color: #000; background: url(../images/btn_bg1.gif); margin: 0px; padding: 0px; border-style: none; height: 24px; width: 70px; }
+.b{ font-weight: bold; }
+td{ font-size: 12px; }
+.t14{ font-size: 14px; }
+.h24{ height:24px; }
+.k{ border: 1px solid #B5CFD9; }
+a:link,a:visited { color: #284F7D; text-decoration: none; }
+a:hover ,a:active{ color: #18304B; text-decoration: underline; }

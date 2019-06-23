@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.user.AdjustAccount" table="USER_ADJUST_ACCOUNT">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_ADJUST_ACCOUNT</param>
+            </generator>
+        </id>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="rechargeAmount" column="RECHARGE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="freezeAmount" column="FREEZE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="body" column="BODY" type="java.lang.String"/>
+        <property name="adjustId" column="ADJUST_ID" type="java.lang.String"/>
+        <property name="operator" column="OPERATOR" type="java.lang.String"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

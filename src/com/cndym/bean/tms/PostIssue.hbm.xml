@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cndym.bean.tms.PostIssue" table="TMS_POST_ISSUE">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_TMS_POST_ISSUE</param>
+			</generator>
+		</id>
+		<property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3" />
+		<property name="name" column="NAME" type="java.lang.String" length="20" />
+		<property name="postCode" column="POST_CODE" type="java.lang.String" length="10" />
+		<property name="startTime" column="START_TIME" type="java.util.Date" />
+		<property name="duplexTime" column="DUPLEX_TIME" type="java.util.Date" />
+		<property name="endTime" column="END_TIME" type="java.util.Date" />
+		<property name="status" column="STATUS" type="java.lang.Integer" length="2" />
+		<property name="bonusTime" column="BONUS_TIME" type="java.util.Date" />
+		<property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer" length="2" />
+		<property name="backup1" column="BACKUP1" type="java.lang.String" length="4000" />
+		<property name="backup2" column="BACKUP2" type="java.lang.String" length="45" />
+		<property name="backup3" column="BACKUP3" type="java.lang.String" length="45" />
+	</class>
+</hibernate-mapping>

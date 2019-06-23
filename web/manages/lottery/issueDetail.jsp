@@ -1,0 +1,114 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="../../jstl.jsp" %>
+<html>
+<head>
+    <title>开奖详细</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="max-age=0" forua="true"/>
+    <meta http-equiv="Cache-Control" content="no-cache" forua="true"/>
+    <meta http-equiv="Cache-Control" content="must-revalidate" forua="true"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/script/validator.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/script/page.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/script/jquery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/My97DatePicker/WdatePicker.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style/page.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style/manages.css">
+    <link href="${pageContext.request.contextPath}/css/kjgg.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        body, td, th {
+            font-family: Arial, "Times New Roman", "宋体";
+        }
+    </style>
+    <script type="text/javascript">
+        function windowClose() {
+            window.close();
+        }
+    </script>
+</head>
+
+<body>
+<!--中间内容开始 -->
+<c:set var="lotteryCode" value="${param.lotteryCode}"></c:set>
+<c:set var="issue" value="${param.issue}"></c:set>
+<c:set var="mainIssue" value="${myf:getMainIssueItem(lotteryCode,issue)}"></c:set>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" class="table table1">
+        <tr>
+            <td class="title">
+                 ${myf:getLotteryChinaName(lotteryCode)}第${issue}期期次详情:
+            </td>
+        </tr>
+          <tr>
+        <td style="padding: 4px;">
+            <table width="100%" border="0" cellpadding="4" cellspacing="0" class="seach_none">
+                <tr>
+                    <td width="20%" align="right" class="bold"><img src="${pageContext.request.contextPath}/img/cply/${myf:getImage(lotteryCode)}"/></td>
+                    <td>
+                        <ul class="kjgg">
+                            <c:forEach var="qianItem" items="${mainIssue.qian}" varStatus="indexs">
+                                <li class="kjred">${qianItem}</li>
+                            </c:forEach>
+                            <c:forEach var="houItem" items="${mainIssue.hou}" varStatus="indexs">
+                                <li class="kjbule">${houItem}</li>
+                            </c:forEach>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">开售时间</td>
+                    <td>${mainIssue.startTime}</td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">开奖日期:</td>
+                    <td>${mainIssue.bonusTime}</td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">兑奖截止日期:</td>
+                    <td class="three">${mainIssue.convertBonusTime}</td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">投注信息:</td>
+                    <td><span>选号:</span> <c:if test="${numberInfos != null }">
+                        <c:forEach var="object" items="${numberInfos}">
+                            <span>${object.number}</span> 【${object.pollName}】</c:forEach>
+                    </c:if>
+                        <br/></td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">本期投注金额:</td>
+                    <td><fmt:formatNumber value="${mainIssue.globalSaleTotal}" pattern="#,##0.00"/>元</td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">滚入下期奖金:</td>
+                    <td><fmt:formatNumber value="${mainIssue.prizePool}" pattern="#,##0.00"/>元</td>
+                </tr>
+                <tr>
+                    <td align="right" class="bold">开奖详情:</td>
+                    <td class="three">
+                        <table width="100%" border="0" cellpadding="4" cellspacing="0" class="sub">
+                            <tr id="two">
+                                <td>奖项</td>
+                                <td>中奖注数</td>
+                                <td>单注奖金</td>
+                            </tr>
+                    <c:forEach var="sub" items="${mainIssue.bonusClass}">
+                        <tr>
+                            <td>${myf:bonusClass(lotteryCode,sub.classes)}</td>
+                            <td><fmt:formatNumber value="${sub.total}" pattern="#,##0"/></td>
+                            <td><fmt:formatNumber value="${sub.amount}" pattern="#,##0.00"/>元</td>
+                        </tr>
+                    </c:forEach>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" class="submit" value="关闭" style="width: 64px; border: none" onclick="javascript:window.close();"/>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </table>
+</div>
+</body>
+</html>

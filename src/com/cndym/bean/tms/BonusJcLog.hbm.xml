@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.BonusJcLog" table="TMS_BONUS_JC_LOG">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_BONUS_JC_LOG</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="30"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="20"/>
+        <property name="sn" column="sn" type="java.lang.String"/>
+        <property name="week" column="week" type="java.lang.String"/>
+        <property name="postCode" column="POST_CODE" type="java.lang.String"/>
+        <property name="subForIssueId" column="SUB_ISSUE_FOR_ID" type="java.lang.Long"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.SubIssueForBeiDan" table="TMS_SUB_ISSUE_FOR_BD">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_SUB_ISSUE_FOR_BD</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="10"/>
+        <property name="date" column="ISSUE_DATE" type="java.lang.String" length="10"/>
+        <property name="sn" column="SN" type="java.lang.String" length="10"/>
+        <property name="week" column="WEEK" type="java.lang.String" length="10"/>
+        <property name="matchColor" column="MATCH_COLOR" type="java.lang.String" length="10"/>
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="matchName" column="MATCH_NAME" type="java.lang.String" length="50"/>
+        <property name="mainTeam" column="MAIN_TEAM" type="java.lang.String" length="50"/>
+        <property name="guestTeam" column="GUEST_TEAM" type="java.lang.String" length="50"/>
+        <property name="endOperator" column="END_OPERATOR" type="java.lang.Integer"/>
+        <property name="bonusOperator" column="BONUS_OPERATOR" type="java.lang.Integer"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+
+        <property name="mainTeamHalfScore" column="MAIN_TEAM_HALF_SCORE" type="java.lang.Integer"/>
+        <property name="guestTeamHalfScore" column="GUEST_TEAM_HALF_SCORE" type="java.lang.Integer"/>
+        <property name="mainTeamScore" column="MAIN_TEAM_SCORE" type="java.lang.Integer"/>
+        <property name="guestTeamScore" column="GUEST_TEAM_SCORE" type="java.lang.Integer"/>
+
+        <property name="letBall" column="LET_BALL" type="java.lang.String" length="10"/>
+
+        <property name="winOrNegaSp" column="WIN_OR_NEGA_SP" type="java.lang.Double"/>
+        <property name="negaSp" column="NEGA_SP" type="java.lang.Double"/>
+        <property name="flatSp" column="FLAT_SP" type="java.lang.Double"/>
+        <property name="winSp" column="WIN_SP" type="java.lang.Double"/>
+
+        <property name="scoreSp" column="SCORE_SP" type="java.lang.Double"/>
+        <property name="scoreFQTSp" column="SCORE_FQT_SP" type="java.lang.Double"/>
+        <property name="scorePQTSp" column="SCORE_PQT_SP" type="java.lang.Double"/>
+        <property name="scoreSQTSp" column="SCORE_SQT_SP" type="java.lang.Double"/>
+        <property name="score00Sp" column="SCORE_00_SP" type="java.lang.Double"/>
+        <property name="score01Sp" column="SCORE_01_SP" type="java.lang.Double"/>
+        <property name="score02Sp" column="SCORE_02_SP" type="java.lang.Double"/>
+        <property name="score03Sp" column="SCORE_03_SP" type="java.lang.Double"/>
+        <property name="score04Sp" column="SCORE_04_SP" type="java.lang.Double"/>
+        <property name="score10Sp" column="SCORE_10_SP" type="java.lang.Double"/>
+        <property name="score11Sp" column="SCORE_11_SP" type="java.lang.Double"/>
+        <property name="score12Sp" column="SCORE_12_SP" type="java.lang.Double"/>
+        <property name="score13Sp" column="SCORE_13_SP" type="java.lang.Double"/>
+        <property name="score14Sp" column="SCORE_14_SP" type="java.lang.Double"/>
+        <property name="score20Sp" column="SCORE_20_SP" type="java.lang.Double"/>
+        <property name="score21Sp" column="SCORE_21_SP" type="java.lang.Double"/>
+        <property name="score22Sp" column="SCORE_22_SP" type="java.lang.Double"/>
+        <property name="score23Sp" column="SCORE_23_SP" type="java.lang.Double"/>
+        <property name="score24Sp" column="SCORE_24_SP" type="java.lang.Double"/>
+        <property name="score30Sp" column="SCORE_30_SP" type="java.lang.Double"/>
+        <property name="score31Sp" column="SCORE_31_SP" type="java.lang.Double"/>
+        <property name="score32Sp" column="SCORE_32_SP" type="java.lang.Double"/>
+        <property name="score33Sp" column="SCORE_33_SP" type="java.lang.Double"/>
+        <property name="score40Sp" column="SCORE_40_SP" type="java.lang.Double"/>
+        <property name="score41Sp" column="SCORE_41_SP" type="java.lang.Double"/>
+        <property name="score42Sp" column="SCORE_42_SP" type="java.lang.Double"/>
+
+        <property name="shangXiaPanSp" column="SHANG_XIA_PAN_SP" type="java.lang.Double"/>
+        <property name="shangDanSp" column="SHANG_DAN_SP" type="java.lang.Double"/>
+        <property name="shangShuangSp" column="SHANG_SHUANG_SP" type="java.lang.Double"/>
+        <property name="xiaShuangSp" column="XIA_SHUANG_SP" type="java.lang.Double"/>
+        <property name="xiaDanSp" column="XIA_DAN_SP" type="java.lang.Double"/>
+
+        <property name="totalGoalSp" column="TOTAL_GOAL_SP" type="java.lang.Double"/>
+        <property name="totalGoal0Sp" column="TOTAL_GOAL_0_SP" type="java.lang.Double"/>
+        <property name="totalGoal1Sp" column="TOTAL_GOAL_1_SP" type="java.lang.Double"/>
+        <property name="totalGoal2Sp" column="TOTAL_GOAL_2_SP" type="java.lang.Double"/>
+        <property name="totalGoal3Sp" column="TOTAL_GOAL_3_SP" type="java.lang.Double"/>
+        <property name="totalGoal4Sp" column="TOTAL_GOAL_4_SP" type="java.lang.Double"/>
+        <property name="totalGoal5Sp" column="TOTAL_GOAL_5_SP" type="java.lang.Double"/>
+        <property name="totalGoal6Sp" column="TOTAL_GOAL_6_SP" type="java.lang.Double"/>
+        <property name="totalGoal7Sp" column="TOTAL_GOAL_7_SP" type="java.lang.Double"/>
+
+        <property name="halfCourtSp" column="HALF_COURT_SP" type="java.lang.Double"/>
+        <property name="halfCourtFFSp" column="HALF_COURT_FF_SP" type="java.lang.Double"/>
+        <property name="halfCourtFPSp" column="HALF_COURT_FP_SP" type="java.lang.Double"/>
+        <property name="halfCourtFSSp" column="HALF_COURT_FS_SP" type="java.lang.Double"/>
+        <property name="halfCourtPFSp" column="HALF_COURT_PF_SP" type="java.lang.Double"/>
+        <property name="halfCourtPPSp" column="HALF_COURT_PP_SP" type="java.lang.Double"/>
+        <property name="halfCourtPSSp" column="HALF_COURT_PS_SP" type="java.lang.Double"/>
+        <property name="halfCourtSFSp" column="HALF_COURT_SF_SP" type="java.lang.Double"/>
+        <property name="halfCourtSPSp" column="HALF_COURT_SP_SP" type="java.lang.Double"/>
+        <property name="halfCourtSSSp" column="HALF_COURT_SS_SP" type="java.lang.Double"/>
+        <property name="operatorsAward" column="OPERATORS_AWARD" type="java.lang.Integer"/>
+        <property name="endDanShiTime" column="END_DAN_SHI_TIME" type="java.util.Date"/>
+        <property name="endFuShiTime" column="END_FU_SHI_TIME" type="java.util.Date"/>
+        <property name="endStatus" column="END_STATUS" type="java.lang.Integer"/>
+
+        <property name="inputAwardStatus" column="INPUT_AWARD_STATUS" type="java.lang.Integer"/>
+        <property name="delay" column="DELAY" type="java.lang.Integer"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String" length="255"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String" length="255"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String" length="255"/>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.Ticket" table="TMS_TICKET">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_TICKET</param>
+            </generator>
+        </id>
+
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="45"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="32"/>
+        <property name="ticketId" column="TICKET_ID" type="java.lang.String" length="32"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="2"/>
+        <property name="pollCode" column="POLL_CODE" type="java.lang.String" length="2"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="20"/>
+        <property name="item" column="ITEM" type="java.lang.Integer"/>
+        <property name="multiple" column="MULTIPLE" type="java.lang.Integer"/>
+        <property name="numberInfo" column="NUMBER_INFO" type="java.lang.String" length="1024"/>
+        <property name="userInfo" column="USER_INFO" type="java.lang.String" length="255"/>
+        <property name="saleCode" column="SALE_CODE" type="java.lang.String" length="50"/>
+        <property name="errCode" column="ERR_CODE" type="java.lang.String" length="10"/>
+        <property name="errMsg" column="ERR_MSG" type="java.lang.String" length="255"/>
+        <property name="postCode" column="POST_CODE" type="java.lang.String" length="2"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="ticketStatus" column="TICKET_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date"/>
+        <property name="bonusClass" column="BONUS_CLASS" type="java.lang.String"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="outTicketId" column="OUT_TICKET_ID" type="java.lang.String" length="32"/>
+        <property name="sidOutTicketId" column="SID_OUT_TICKET_ID" type="java.lang.String" length="100"/>
+        <property name="saleInfo" column="SALE_INFO" type="java.lang.String"/>
+        <property name="startGameId" column="START_GAME_ID" type="java.lang.String"/>
+        <property name="endGameId" column="END_GAME_ID" type="java.lang.String"/>
+        <property name="gameStartTime" column="GAME_START_TIME" type="java.util.Date"/>
+        <property name="gameEndTime" column="GAME_END_TIME" type="java.util.Date"/>
+        <property name="sendTime" column="SEND_TIME" type="java.util.Date"/>
+        <property name="returnTime" column="RETURN_TIME" type="java.util.Date"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+        <property name="bigBonus" column="BIG_BONUS" type="java.lang.Integer"/>
+        <property name="duiJiangStatus" column="DUI_JIANG_STATUS" type="java.lang.Integer"/>
+        <property name="duiJiangTime" column="DUI_JIANG_TIME" type="java.util.Date"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+
+        <property name="sumTicket" column="SUM_TICKET" type="java.lang.Integer"/>
+        <property name="successTicket" column="SUCCESS_TICKET" type="java.lang.Integer"/>
+        <property name="failureTicket" column="FAILURE_TICKET" type="java.lang.Integer"/>
+        <property name="successAmount" column="SUCCESS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="failureAmount" column="FAILURE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+
+    </class>
+</hibernate-mapping>

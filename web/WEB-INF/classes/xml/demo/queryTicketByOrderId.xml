@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<header>
+		<sid>800001</sid>
+		<cmd>012</cmd>
+		<digestType>md5</digestType>
+		<digest>8123f913e123e123990028d9c72e013c</digest>
+	</header>
+	<body>
+		<query orderId="批次号" />
+	</body>
+</message>

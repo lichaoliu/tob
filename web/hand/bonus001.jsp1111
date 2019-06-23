@@ -1,0 +1,88 @@
+<%@page import="java.util.Calendar"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="com.cndym.utils.Utils"%>
+<%@ page import="com.cndym.utils.ConfigUtils"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+<%@ page contentType="text/html;charset=gbk"%>
+<%
+	final String driverName = ConfigUtils.getValue("ORACLE.DATASOURCE.DRIVERCLASSNAME");
+    final String url = ConfigUtils.getValue("ORACLE.DATASOURCE.URL");
+    final String username = ConfigUtils.getValue("ORACLE.DATASOURCE.USERNAME");
+    final String password = ConfigUtils.getValue("ORACLE.DATASOURCE.PASSWORD");
+
+    Connection conn = null;
+    Statement statement = null;
+    ResultSet resultSet = null;
+    try {
+    	String bonusNumber = "01,07,08,09,11,22#03";
+    	Calendar calendar = Calendar.getInstance();
+		int hour = calendar.get(Calendar.HOUR_OF_DAY);
+		int minute = calendar.get(Calendar.MINUTE);
+
+        Class.forName(driverName);
+        conn = DriverManager.getConnection(url, username, password);
+        StringBuilder result = new StringBuilder();
+        String sql = "select sid,ticket_id,number_info,item,multiple from tms_ticket where create_time >= to_date('20140403','yyyymmdd') and lottery_code='001' and issue='2014036' and ticket_status=4";
+        statement = conn.createStatement();
+        resultSet = statement.executeQuery(sql);
+
+        String ticket_id = null;
+		String[] bonusNumberArray = bonusNumber.split("#");
+		String[] bonusNumberRedArray = bonusNumberArray[0].split(",");
+		int red = 0;
+		int blue = 0;
+        String betRed = null;
+        String betBlue = null;
+        int index = 1;
+        while (resultSet.next()) {
+        	ticket_id = resultSet.getString("ticket_id");
+            String[] numberInfoArray = resultSet.getString("number_info").split(";");
+            for (String numberInfo : numberInfoArray) {
+        		red = 0;
+        		blue = 0;
+            	String[] numberArray = numberInfo.split("#");
+	            betRed = numberArray[0];
+	            betBlue = numberArray[1];
+				for(String bonusRed : bonusNumberRedArray){
+					if (betRed.contains(bonusRed)) {
+						red++;
+					}
+				}
+				if (betBlue.contains(bonusNumberArray[1])) {
+					blue++;
+				}
+				
+				if (blue > 0) {
+					out.println(index+"=a"+ticket_id+"="+resultSet.getString("sid")+"$"+numberInfo+"="+red+","+blue+"="+resultSet.getString("multiple")+"<br/>");
+				} else if (red > 3){
+					out.println(index+"=a"+ticket_id+"="+resultSet.getString("sid")+"$"+numberInfo+"="+red+","+blue+"="+resultSet.getString("multiple")+"<br/>");
+				}
+            }
+            index++;
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        if (null != resultSet) {
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (null != statement) {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (null != conn) {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+%>

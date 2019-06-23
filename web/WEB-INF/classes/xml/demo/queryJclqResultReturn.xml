@@ -1,0 +1,22 @@
+<messages>
+	<header>
+		<sid><![CDATA[8001]]></sid>
+		<cmd><![CDATA[017]]></cmd>
+		<digestType><![CDATA[md5]]></digestType>
+		<digest><![CDATA[59ed5757c59cf23472b0912ea27dcd55]]></digest>
+	</header>
+	<body>
+		<response code="0000" msg="系统处理成功">
+			<match sn="001" endTime="1351616460000" status="状态(1销售中,2已截止,3已开奖,4已返奖,5取消 )">
+				<matchName><![CDATA[联赛]]></matchName>
+				<mainTeam><![CDATA[主队名]]></mainTeam>
+				<guestTeam><![CDATA[客队名]]></guestTeam>
+				<matchResult mainTeamHalfScore="主队半场比分" guestTeamHalfScore="客队半场比分" mainTeamScore="主队全场比分" guestTeamScore="客队全场比分" letBall="让球"></matchResult>
+				<winOrNegaSp>胜负赔率</winOrNegaSp>
+				<letWinOrNegaSp>胜分差赔率</letWinOrNegaSp>
+				<winNegaDiffSp>进球数赔率</winNegaDiffSp>
+				<bigOrLittleSp>大小分赔率</bigOrLittleSp>
+			</match>
+		</response>
+	</body>
+</messages>

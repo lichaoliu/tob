@@ -1,0 +1,203 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* background-image: url(/images/bg.png); */
+}
+
+.table {
+    border-collapse: collapse;
+}
+.table1 { border-collapse: collapse; border-right: 1px solid #aebdcc; border-bottom: 1px solid #aebdcc; border-left: 1px solid #aebdcc; }
+.title {
+    padding-left: 20px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background: url(/images/title_bg1.gif);
+    height: 39px;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+a:link, a:active, a:visited {
+    text-decoration: underline;
+    color: #095C90;
+}
+
+.three {
+    background-color: #fff;
+}
+
+a:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+.mainTab {
+    border-collapse: collapse;
+}
+
+.seach { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; border-collapse: collapse; background-color: #f8fbfc; margin-top: 4px; }
+.seach_none { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; border-collapse: collapse; background-color: #f8fbfc; margin-top: 4px; }
+
+.content, .sub {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+    background-color: #FFF;
+    margin-top: 5px;
+}
+
+.bold{ font-weight: 700; }
+
+.sub {
+    margin-top: 0px;
+}
+.seach1 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; border-collapse: collapse; background-color: #f8fbfc; margin-top: 4px; }
+.seach1 td { border: 0px solid #FBC393; }
+.seach1 {
+    border-top: 0px #FBC393 solid;
+    border-left: 0px #FBC393 solid;
+}
+.seach td, .content td { border: 1px solid #aebdcc; }
+
+.content tr.add td { background-color: #F5F5F5; }
+
+.seach, .content {
+    border-top: 1px #aebdcc solid;
+    border-left: 1px #aebdcc solid;
+}
+
+#one td {
+    font: normal 14px/28px "微软雅黑", "黑体";
+    color: #000;
+    background: url(/images/hr_bg.gif) repeat-x;
+    height: 28px;
+    text-align: center;
+}
+
+#f td {
+    font: normal 14px/28px "微软雅黑", "黑体";
+    color: #000;
+    background-color: #ffffcc;
+    height: 28px;
+    text-align: center;
+}
+
+.f td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+    background-color: #ffffcc;
+    margin-top: 5px;
+}
+
+#two td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #000;
+    background-color: #f1f1f1;
+}
+
+.seach input {
+    border: 1px #bbb solid;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 23px;
+    width: 180px;
+}
+
+.time {
+    width: 83px;
+}
+
+.mainTab td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 4px 0 4px;
+    background-color: #F1F4FB;
+}
+
+.over td {
+    background-color: #f1f1f1;
+}
+
+.out td {
+    background-color: #ffffff;
+}
+
+.input {
+    width: 80%;
+    height: 22px;
+    padding: 2px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px
+}
+
+.submit {
+    text-align: center;
+    width: 64px;
+    height: 31px;
+    border: none;
+    background: url(/images/bn.gif) no-repeat center;
+    color: #FFF;
+    cursor: pointer
+}
+
+.tab {
+    line-height: 32px;
+    background-repeat: no-repeat;
+    height: 32px;
+    font-size: 12px;
+}
+
+.tab ul {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tab li {
+    display: block;
+    float: left;
+    width: 105px;
+    cursor: pointer;
+    color: #3f3f3f;
+    text-align: center;
+    margin-left: 5px;
+    background: url(/images/tb_linl_1.gif) no-repeat;
+}
+
+.tab li a:link, .tab li a:active, .tab li a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.tab li.hover {
+    font-weight: bold;
+    text-decoration: none;
+    background: url(/images/tb_hover_1.gif) no-repeat;
+    width: 105px;
+    text-align: center;
+    margin-left: 5px;
+    color: #ffffff;
+}
+
+form {
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.huise {
+
+    color: #CCCCCC;
+}
+
+form {
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.huise {
+    color: #CCCCCC;
+}

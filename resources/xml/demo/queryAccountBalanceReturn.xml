@@ -1,0 +1,13 @@
+<messages>
+	<header>
+		<sid><![CDATA[8001]]></sid>
+		<cmd><![CDATA[015]]></cmd>
+		<digestType><![CDATA[md5]]></digestType>
+		<digest><![CDATA[23f7b8ba5b73fe6945e90cb30a87be5f]]></digest>
+	</header>
+	<body>
+		<response code="0000" msg="系统处理成功">
+			<account amount="总余额"></account>
+		</response>
+	</body>
+</messages>

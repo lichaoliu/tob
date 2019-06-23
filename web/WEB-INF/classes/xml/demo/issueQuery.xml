@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<header>
+		<sid>8001</sid>
+		<cmd>010</cmd>
+		<digestType>md5</digestType>
+		<digest>8123f913e123e123990028d9c72e013c</digest>
+	</header>
+	<body>
+		<!-- 数字彩期次查询请求 -->
+		<!-- 不传期次查询的结果是该彩种的当前期 -->
+		<query issue="期次" lotteryId="彩种编号" />
+	</body>
+</message>

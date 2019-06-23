@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.sys.PurviewGroupToPurview" table="SYS_PURVIEW_GROUP_TO_PURVIEW">
+        <id name="id" column="ID">
+			<generator class="sequence">
+                <param name="sequence">SEQ_PURVIEW_GROUP_TO_PURVIEW</param>
+            </generator>
+		</id>
+        <property name="purviewGroupCode" column="PURVIEW_GROUP_CODE" type="java.lang.String" length="20"/>
+        <property name="purviewCode" column="PURVIEW_CODE" type="java.lang.String" length="20"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

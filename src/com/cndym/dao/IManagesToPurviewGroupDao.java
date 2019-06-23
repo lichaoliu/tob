@@ -1,0 +1,30 @@
+package com.cndym.dao;
+
+import com.cndym.bean.sys.ManagesToPurviewGroup;
+import com.cndym.bean.sys.PurviewGroup;
+import com.cndym.utils.hibernate.PageBean;
+
+import java.util.List;
+
+/**
+ * User: 邓玉明
+ * Date: 11-3-27 下午10:24
+ */
+public interface IManagesToPurviewGroupDao extends IGenericDao<ManagesToPurviewGroup> {
+    public PageBean getPageBeanByPara(ManagesToPurviewGroup managesToPurviewGroup, Integer page, Integer pageSize);
+
+    public void deleteByPurviewGroupCode(String purviewGroupCode);
+
+    public List getPageBeanByPara(ManagesToPurviewGroup managesToPurviewGroup);
+
+    public List getPageBeanByPara(String code);
+
+    public List<PurviewGroup> getPurviewGroupNo(Long memberId);
+
+    public List<PurviewGroup> getPurviewGroupList();
+
+    public void deleteForId(Long id);
+
+    public void deleteForManagesId(Long managesId);
+
+}

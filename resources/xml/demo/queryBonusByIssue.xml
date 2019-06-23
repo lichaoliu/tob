@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<header>
+		<sid>800001</sid>
+		<cmd>013</cmd>
+		<digestType>md5</digestType>
+		<digest>8123f913e123e123990028d9c72e013c</digest>
+	</header>
+	<body>
+		<!-- 数字彩按期中奖订单查询 -->
+		<query issue="期次" lotteryId="彩种编号" page="页数" pageSize="每页条数 （默认500）" />
+	</body>
+</message>

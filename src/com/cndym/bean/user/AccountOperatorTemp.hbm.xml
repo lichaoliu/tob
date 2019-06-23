@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cndym.bean.user.AccountOperatorTemp" table="USER_ACCOUNT_OPERATOR_TEMP">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_USER_ACCOUNT_OPERATOR_TEMP</param>
+			</generator>
+		</id>
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="20" />
+		<property name="orderId" column="ORDER_ID" type="java.lang.String" length="45" />
+		<property name="ticketId" column="TICKET_ID" type="java.lang.String" length="45" />
+		<property name="sid" column="SID" type="java.lang.String" length="45" />
+		<property name="resources" column="RESOURCES" type="java.lang.String" length="45" />
+		<property name="eventCode" column="EVENT_CODE" type="java.lang.String" length="20" />
+		<property name="status" column="STATUS" type="java.lang.Integer" />
+		<property name="amount" column="AMOUNT" type="java.lang.Double" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="acceptTime" column="ACCEPT_TIME" type="java.util.Date" />
+		<property name="backup1" column="backup1" type="java.lang.String" />
+		<property name="backup2" column="backup2" type="java.lang.String" />
+		<property name="backup3" column="backup3" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

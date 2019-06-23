@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.sys.PurviewUrl" table="SYS_PURVIEW_URL">
+        <id name="id" column="ID">
+			<generator class="sequence">
+                <param name="sequence">SEQ_SYS_PURVIEW_URL</param>
+            </generator>
+		</id>
+        <property name="code" column="CODE" type="java.lang.String" length="10"/>
+        <property name="servletName" column="SERVLET_NAME" type="java.lang.String" length="45"/>
+        <property name="actionName" column="ACTION_NAME" type="java.lang.String" length="20"/>
+        <property name="url" column="URL" type="java.lang.String" length="255"/>
+        <property name="name" column="NAME" type="java.lang.String" length="50"/>
+        <property name="nameFather" column="NAME_FATHER" type="java.lang.String" length="50"/>
+        <property name="codeFather" column="CODE_FATHER" type="java.lang.String" length="50"/>
+        <property name="sort" column="SORT" type="java.lang.Integer" length="50"/>
+
+    </class>
+</hibernate-mapping>

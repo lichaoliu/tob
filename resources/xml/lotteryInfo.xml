@@ -1,0 +1,1305 @@
+<!-- 规则//0010001|ex1130103 -->
+<lotterys>
+    <!--<lottery code="彩种编码" current="当前可销售期次，0表示多期" handworkBonus="5000" modify="是否支持多期" early="提前结期时间" auto="自动处理方式，0追号模式，1非追号模式" putOff="推迟发送时间" dashi="单式提前时间"
+         dialect="别名" name="彩种名"> -->
+    <!-- begin体彩 -->
+    <lottery subPrograms="100" code="113" current="1" handworkBonus="0" modify="0" early="1500" dashi="1800"
+             dialect="dlt" auto="0" putOff="0"
+             name="大乐透">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="追加" eachamount="3">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="生肖乐" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    
+    <lottery subPrograms="500" code="012" current="1" handworkBonus="5000" modify="0" early="120" dashi="120"
+             dialect="gsk3" auto="0" putOff="5000"
+             name="甘肃快3">
+        <play code="01" name="普通" eachamount="">
+            <poll code="04" name="和值" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="02" name="二同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="03" name="三同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="二不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="05" name="三不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="三连号" eachamount="">
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="100" code="108" current="1" handworkBonus="0" modify="0" early="1500" dashi="1800"
+             dialect="pl3" auto="0" putOff="0"
+             name="排列三">
+        <play code="01" name="直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="10" name="组合" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+            <poll code="18" name="组合胆拖" db="99" ticket="1" examina=""/>
+
+        </play>
+        <play code="02" name="组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="组三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="组六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="100" code="109" current="1" handworkBonus="0" modify="0" early="1500" dashi="1800"
+             dialect="pl5" auto="0" putOff="0"
+             name="排列五">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="100" code="110" current="1" handworkBonus="0" modify="0" early="1500" dashi="1800"
+             dialect="qxc" auto="0" putOff="0"
+             name="七星彩">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="500" code="105" current="1" handworkBonus="0" modify="0" early="120" dashi="120"
+             dialect="gd11x5" auto="0" putOff="0"
+             name="广东11选5">
+        <play code="01" name="任一" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="10" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="13" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="107" current="1" handworkBonus="0" modify="0" early="60" dashi="60"
+             dialect="sd11x5" auto="0" putOff="0"
+             name="山东11选5">
+        <play code="01" name="任一" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="13" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        
+        <play code="14" name="乐选二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="15" name="乐选三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="16" name="乐选四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="17" name="乐选五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="500" code="104" current="1" handworkBonus="0" modify="0" early="100" dashi="100"
+             dialect="cq11x5" auto="0" putOff="0"
+             name="重庆11选5">
+        <play code="01" name="任一" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="13" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="106" current="1" handworkBonus="0" modify="0" early="60" dashi="60"
+             dialect="ah11x5" auto="0" putOff="0"
+             name="安徽11选5">
+        <play code="01" name="前一" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="13" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    
+    <lottery subPrograms="500" code="101" current="1" handworkBonus="0" modify="0" early="90" dashi="90"
+             dialect="jx11x5" auto="0" putOff="0"
+             name="江西11选5">
+        <play code="01" name="任一" eachamount="">
+       		<poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="09" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    
+    <lottery subPrograms="500" code="102" current="1" handworkBonus="0" modify="0" early="150" dashi="150"
+             dialect="hlj11x5" auto="0" putOff="0"
+             name="黑龙江11选5">
+        <play code="01" name="任一" eachamount="">
+       		<poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="09" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    
+    <lottery subPrograms="500" code="103" current="1" handworkBonus="0" modify="0" early="90" dashi="90"
+             dialect="xj11x5" auto="0" putOff="0"
+             name="新疆11选5">
+        <play code="01" name="前直一" eachamount="">
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="09" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="111" current="1"
+		handworkBonus="0" modify="0" early="120" dashi="120" dialect="sx11x5"
+		auto="0" putOff="0" name="陕西11选5">
+		<play code="01" name="前直一" eachamount="">
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+		</play>
+		<play code="02" name="任二" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="03" name="任三" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="04" name="任四" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="05" name="任五" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="06" name="任六" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="07" name="任七" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="08" name="任八" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+		</play>
+		<play code="09" name="前二直选" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+		</play>
+		<play code="10" name="前三直选" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+		</play>
+		<play code="11" name="前二组选" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+		<play code="12" name="前三组选" eachamount="">
+			<poll code="01" name="单式" db="99" ticket="5" examina="" />
+			<poll code="02" name="复式" db="99" ticket="1" examina="" />
+			<poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+		</play>
+	</lottery>
+
+
+    <lottery subPrograms="500" code="112" current="1"
+             handworkBonus="0" modify="0" early="120" dashi="120" dialect="qh11x5"
+             auto="0" putOff="0" name="青海11选5">
+        <play code="01" name="前直一" eachamount="">
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+        </play>
+        <play code="02" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="03" name="任三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="04" name="任四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="05" name="任五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="06" name="任六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="07" name="任七" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="08" name="任八" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+        </play>
+        <play code="09" name="前二直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+        </play>
+        <play code="10" name="前三直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+        </play>
+        <play code="11" name="前二组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+        <play code="12" name="前三组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina="" />
+            <poll code="02" name="复式" db="99" ticket="1" examina="" />
+            <poll code="03" name="胆拖" db="99" ticket="1" examina="" />
+        </play>
+    </lottery>
+    <!-- end体彩 -->
+    <!-- begin山东快乐扑克 -->
+    <lottery subPrograms="500" code="114" current="1" handworkBonus="0" modify="5000" early="60" dashi="60"
+             dialect="sdklpk" auto="0" putOff="5000"
+             name="山东快乐扑克">
+        <play code="01" name="任选一" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="任选二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="任选三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="任选四" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="任选五" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="任选六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="同花包选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="同花单选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="09" name="同花顺包选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="同花顺单选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="11" name="顺子包选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="12" name="顺子单选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="13" name="豹子包选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="14" name="豹子单选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="15" name="对子包选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="16" name="对子单选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+     <!-- end山东快乐扑克 -->
+    
+    <!-- begin传统足彩 -->
+    <lottery subPrograms="100" code="300" current="0" handworkBonus="0" modify="1" early="1500" dashi="1800"
+             dialect="zcsfc" auto="0" putOff="0"
+             name="胜负彩">
+        <play code="01" name="14场" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="3" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="100" code="301" current="0" handworkBonus="0" modify="1" early="1500" dashi="1800"
+             dialect="zcbqc" auto="0" putOff="0"
+             name="半全场">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="3" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="100" code="302" current="0" handworkBonus="0" modify="1" early="1500" dashi="1800"
+             dialect="zcjq" auto="0" putOff="0"
+             name="进球彩">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="3" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="100" code="303" current="0" handworkBonus="0" modify="1" early="1500" dashi="1800"
+             dialect="zcsfc9" auto="0" putOff="0"
+             name="任九场">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="3" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <!-- end传统足彩 -->
+
+    <!-- begin福彩 -->
+    <!--<lottery code="彩种编码" current="当前可销售期次，0表示多期" handworkBonus="5000" modify="是否支持多期" early="提前结期时间" dataUpdate="是否需要使用上一期时间" startTime="第一期时间" auto="0"
+         putOff="推迟发送时间" dashi="0" dialect="别名" name="彩种名"> -->
+    <lottery subPrograms="500" code="001" current="1" handworkBonus="5000" modify="0" early="900" dashi="1800"
+             dialect="ssq" auto="0" putOff="0"
+             name="双色球">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="002" current="1" handworkBonus="5000" modify="0" early="900" dashi="1800"
+             dialect="d3" auto="0" putOff="0"
+             name="福彩3D">
+        <play code="01" name="直选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="1" examina=""/>
+            <poll code="23" name="奇偶" db="99" ticket="1" examina=""/>
+            <poll code="24" name="大小" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="组选3" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="1" examina=""/>
+            <poll code="21" name="包选" db="99" ticket="1" examina=""/>
+            <poll code="23" name="奇偶" db="99" ticket="1" examina=""/>
+            <poll code="24" name="大小" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="组选6" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="1" examina=""/>
+            <poll code="21" name="包选" db="99" ticket="1" examina=""/>
+            <poll code="23" name="奇偶" db="99" ticket="1" examina=""/>
+            <poll code="24" name="大小" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="组选" eachamount="">
+            <poll code="09" name="包胆" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="组合" eachamount="">
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+            <poll code="16" name="跨度" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="1" examina=""/>
+            <poll code="22" name="和尾值" db="99" ticket="1" examina=""/>
+            <poll code="23" name="奇偶" db="99" ticket="1" examina=""/>
+            <poll code="24" name="大小" db="99" ticket="1" examina=""/>
+        </play>
+
+
+    </lottery>
+    <lottery subPrograms="500" code="003" current="1" handworkBonus="5000" modify="0" early="300" dashi="1800"
+             dialect="s5x5" auto="0" putOff="0"
+             name="15选5">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="好运彩2" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="好运彩3" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="好运彩4" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="004" current="1" handworkBonus="5000" modify="0" early="900" dashi="1800"
+             dialect="qlc" auto="0" putOff="0"
+             name="七乐彩">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="005" current="1" handworkBonus="5000" modify="0" early="300" dashi="1800"
+             dialect="df61" auto="0" putOff="0"
+             name="东方6+1">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="006" current="1" handworkBonus="5000" modify="0" early="80" dashi="80"
+             dialect="cqssc" auto="0" putOff="5000"
+             name="重庆时时彩">
+        <play code="01" name="一星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="二星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="三星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="四星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="五星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="1" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="二星组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+            <poll code="09" name="包胆" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="三星组三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="三星组六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="1" examina=""/>
+            <poll code="06" name="包号" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="20" name="任一" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="21" name="任二" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="30" name="大小单双" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+    </lottery>
+
+
+    <lottery subPrograms="500" code="007" current="1" handworkBonus="5000" modify="0" early="30" dashi="30"
+             dialect="hbk3" auto="0" putOff="5000"
+             name="湖北快3">
+        <play code="01" name="普通" eachamount="">
+            <poll code="04" name="和值" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="02" name="二同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="03" name="三同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="04" name="二不同号" eachamount="">
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="05" name="三不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="三连号" eachamount="">
+            <poll code="08" name="通选" db="99" ticket="5" examina=""/>
+        </play>
+
+    </lottery>
+
+
+    <lottery subPrograms="500" code="010" current="1" handworkBonus="5000" modify="0" early="75" dashi="75"
+             dialect="hbk3" auto="0" putOff="5000"
+             name="安徽快3">
+        <play code="01" name="普通" eachamount="">
+            <poll code="04" name="和值" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="02" name="二同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="03" name="三同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="04" name="二不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="03" name="胆拖" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="三不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="三连号" eachamount="">
+            <poll code="08" name="通选" db="99" ticket="5" examina=""/>
+        </play>
+
+    </lottery>
+	<lottery subPrograms="500" code="013" current="1" handworkBonus="5000"  modify="0" early="0" dashi="0"
+             dialect="jxk3" auto="0" putOff="5000"
+             name="江西快3">
+        <play code="01" name="普通" eachamount="">
+            <poll code="04" name="和值" db="99" ticket="5" examina=""/>
+        </play>   
+        <play code="02" name="二同号" eachamount="">
+        	<poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>  
+        <play code="03" name="三同号" eachamount="">
+        	<poll code="01" name="单选" db="99" ticket="5" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="二不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="三不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="三连号" eachamount="">
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="011" current="1" handworkBonus="5000" modify="0" early="75" dashi="75"
+             dialect="jsk3" auto="0" putOff="5000"
+             name="江苏快3">
+        <play code="01" name="普通" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="04" name="和值" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="02" name="二同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="03" name="三同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="二不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="05" name="三不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="三连号" eachamount="">
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="500" code="008" current="1" handworkBonus="5000" modify="0" early="120" dashi="2400"
+             dialect="hbssc" auto="0" putOff="5000"
+             name="湖北时时彩">
+        <play code="01" name="一星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="02" name="二星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+            <poll code="10" name="组合" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="03" name="三星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+            <poll code="10" name="组合" db="99" ticket="1" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="5" examina=""/>
+            <poll code="19" name="组合复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="五星" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+            <poll code="10" name="组合" db="99" ticket="1" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="二星组选" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+            <poll code="09" name="包胆" db="99" ticket="5" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="5" examina=""/>
+            <poll code="20" name="分组" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="三星组三" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="08" name="三星组六" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="09" name="三星组选" eachamount="">
+            <poll code="09" name="包胆" db="99" ticket="5" examina=""/>
+            <poll code="17" name="包点" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="30" name="大小单双" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+        </play>
+    </lottery>
+
+    <lottery subPrograms="500" code="009" current="1" handworkBonus="5000" modify="0" early="120" dashi="120"
+             dialect="jxssc" auto="0" putOff="5000"
+             name="江西时时彩">
+        <play code="01" name="一星" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="50" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="二星" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="50" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="50" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="50" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="三星" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="50" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="50" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="四星" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="50" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="50" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="五星" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="50" ticket="1" examina=""/>
+            <poll code="07" name="复选" db="50" ticket="1" examina=""/>
+            <poll code="08" name="通选" db="50" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="二星组选" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="50" ticket="1" examina=""/>
+            <poll code="04" name="和值" db="50" ticket="1" examina=""/>
+            <poll code="09" name="包胆" db="50" ticket="1" examina=""/>
+        </play>
+        <play code="07" name="三星组三" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+        </play>
+        <play code="08" name="三星组六" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+        </play>
+        <play code="11" name="任一" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+        </play>
+        <play code="12" name="任二" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+        </play>
+        <play code="30" name="大小单双" eachamount="">
+            <poll code="01" name="单式" db="50" ticket="5" examina=""/>
+        </play>
+    </lottery>
+    <lottery subPrograms="500" code="014" current="1" handworkBonus="5000"  modify="0" early="120" dashi="120"
+             dialect="jxk3" auto="0" putOff="5000"
+             name="广西快3">
+        <play code="01" name="普通" eachamount="">
+            <poll code="04" name="和值" db="99" ticket="5" examina=""/>
+        </play>   
+        <play code="02" name="二同号" eachamount="">
+        	<poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="07" name="复选" db="99" ticket="5" examina=""/>
+        </play>  
+        <play code="03" name="三同号" eachamount="">
+        	<poll code="01" name="单选" db="99" ticket="5" examina=""/>
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="二不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="三不同号" eachamount="">
+            <poll code="01" name="单式" db="99" ticket="5" examina=""/>
+            <poll code="02" name="复式" db="99" ticket="5" examina=""/>
+        </play>
+        <play code="06" name="三连号" eachamount="">
+            <poll code="08" name="通选" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <!-- end福彩 -->
+
+    <!-- begin北京单场 -->
+    <!--singlePassTicket 单关票数 -->
+    <lottery subPrograms="100" code="400" current="1" handworkBonus="0" modify="0" early="300" dashi="2100"
+             dialect="bjdanchang" auto="0" putOff="0"
+             name="北京单场">
+        <lotteryTimes>
+            <lotteryTime action="sale" week="1,2,3,4,5,6,0" startTime="09:00:00" endTime="06:00:00" addDate="1"/>
+        </lotteryTimes>
+        <play code="01" name="让球胜平负" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="上下单双" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="总进球数" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="半全场胜平负" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="单场比分" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="06" name="下半场比分" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <!-- end北京单场 -->
+
+    <!-- begin竞彩足球 -->
+    <lottery subPrograms="100" code="200" current="1" handworkBonus="0" modify="0" early="1200" dashi="1800"
+             dialect="jingcaizuqiu" auto="1"
+             putOff="0" name="竞彩足球">
+        <lotteryTimes>
+            <lotteryTime action="sale" week="1,2,3,4,5" startTime="09:00:00" endTime="24:00:00" addDate="0"/>
+            <lotteryTime action="sale" week="0,6" startTime="09:00:00" endTime="01:00:00" addDate="1"/>
+        </lotteryTimes>
+        <play code="01" name="让球胜平负" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="总进球数" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="半全场" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="比分" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="05" name="胜平负" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="混投" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <!-- end竞彩足球 -->
+    <!-- begin竞彩冠军杯 -->
+    <lottery subPrograms="100" code="202" current="1" handworkBonus="0" modify="0" early="1200" dashi="1800"
+             dialect="jingcaizuqiu" auto="1"
+             putOff="0" name="世界杯">
+        <lotteryTimes>
+            <lotteryTime action="sale" week="1,2,3,4,5" startTime="09:00:00" endTime="24:00:00" addDate="0"/>
+            <lotteryTime action="sale" week="0,6" startTime="09:00:00" endTime="01:00:00" addDate="1"/>
+        </lotteryTimes>
+        <play code="01" name="世界杯" singlePassTicket="1" eachamount="">
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <!-- end竞彩冠军杯 -->
+
+    <!-- begin竞彩篮球 -->
+    <lottery subPrograms="100" code="201" current="1" handworkBonus="0" modify="0" early="1200" dashi="1800"
+             dialect="jingcailanqiu" auto="1"
+             putOff="0" name="竞彩篮球">
+        <lotteryTimes>
+            <lotteryTime action="sale" week="1,2,5" startTime="09:00:00" endTime="24:00:00" addDate="0"/>
+            <lotteryTime action="sale" week="3,4" startTime="07:30:00" endTime="24:00:00" addDate="0"/>
+            <lotteryTime action="sale" week="0,6" startTime="09:00:00" endTime="01:00:00" addDate="1"/>
+        </lotteryTimes>
+        <play code="01" name="胜负" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="串关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="02" name="让分胜负" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="串关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="03" name="胜分差" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="串关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="04" name="大小分" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="串关" db="99" ticket="1" examina=""/>
+        </play>
+        <play code="10" name="混投" singlePassTicket="1" eachamount="">
+            <poll code="00" name="混合" db="99" ticket="1" examina=""/>
+            <poll code="01" name="单关" db="99" ticket="1" examina=""/>
+            <poll code="02" name="过关" db="99" ticket="1" examina=""/>
+        </play>
+    </lottery>
+    <!-- end竞彩篮球 -->
+</lotterys>

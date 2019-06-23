@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.user.Member" table="USER_MEMBER">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_MEMBER</param>
+            </generator>
+        </id>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="name" column="NAME" type="java.lang.String" length="20"/>
+        <property name="mobile" column="MOBILE" type="java.lang.String" length="20"/>
+        <property name="email" column="EMAIL" type="java.lang.String" length="100"/>
+        <property name="cardCode" column="CARD_CODE" type="java.lang.String" length="45"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="2"/>
+        <property name="loginIp" column="LOGIN_IP" type="java.lang.String" length="20"/>
+        <property name="loginTime" column="LOGIN_TIME" type="java.util.Date"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="privateKey" column="PRIVATE_KEY" type="java.lang.String" length="20"/>
+        <property name="companyName" column="COMPANY_NAME" type="java.lang.String" length="500"/>
+        <property name="companyAddress" column="COMPANY_ADDRESS" type="java.lang.String" length="500"/>
+        <property name="contactPerson" column="CONTACT_PERSON" type="java.lang.String" length="50"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String" length="250"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String" length="250"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String" length="250"/>
+    </class>
+</hibernate-mapping>

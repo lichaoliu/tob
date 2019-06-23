@@ -1,0 +1,15 @@
+<services>
+    <!--投注接口 -->
+    <service cmd="001" response="001" xsd="order.xsd" adapter="orderAdapter"/>
+    <service cmd="010" response="010" xsd="queryIssue.xsd" adapter="queryIssueAdapter"/>
+    <service cmd="011" response="011" xsd="queryTicket.xsd" adapter="queryTicketAdapter"/>
+    <service cmd="012" response="012" xsd="queryTicketByOrderId.xsd" adapter="queryTicketByOrderIdAdapter"/>
+    <service cmd="013" response="013" xsd="queryBonusByIssue.xsd" adapter="queryBonusByIssueAdapter"/>
+    <service cmd="014" response="014" xsd="queryJingJiBonusBySn.xsd" adapter="queryJingJiBonusBySnAdapter"/>
+    <service cmd="015" response="015" xsd="queryAccountBalance.xsd" adapter="queryAccountBalanceAdapter"/>
+    <service cmd="016" response="016" xsd="queryJingJiZuQiuMacth.xsd" adapter="queryJingJiZuQiuMacthAdapter"/>
+    <service cmd="017" response="017" xsd="queryJingJiLanQiuMacth.xsd" adapter="queryJingJiLanQiuMacthAdapter"/>
+    <service cmd="019" response="019" xsd="queryJingJiZuQiuMacthList.xsd" adapter="queryJingJiZuQiuMacthListAdapter"/>
+    <service cmd="020" response="020" xsd="queryJingJiLanQiuMacthList.xsd" adapter="queryJingJiLanQiuMacthListAdapter"/>
+    <service cmd="018" response="018" xsd="queryFootBallGame.xsd" adapter="queryFootBallGameAdapter"/>
+</services>

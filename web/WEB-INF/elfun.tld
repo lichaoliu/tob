@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <short-name>myf</short-name>
+
+    <function>
+        <name>addDate</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String addDate(java.lang.String,int)</function-signature>
+    </function>
+    <function>
+        <name>operationDate</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Date operationDate(java.util.Date,java.lang.String,int)</function-signature>
+    </function>
+    <function>
+        <name>isToday</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Boolean isToday(java.util.Date)</function-signature>
+    </function>
+
+    <function>
+        <name>formatIdCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatIdCode(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>formatMobile</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatMobile(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>formatEmail</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatEmail(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>formatBankCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatBankCode(java.lang.String)</function-signature>
+    </function>
+
+
+    <function>
+        <name>formatRealName</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatRealName(java.lang.String)</function-signature>
+    </function>
+
+
+    <function>
+        <name>findAllLotteryCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map findAllLotteryCode()</function-signature>
+    </function>
+
+    <function>
+        <name>findNonJingCaiLotteryCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map findNonJingCaiLotteryCode()</function-signature>
+    </function>
+
+    <function>
+        <name>filterBonusClassToString</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String
+            filterBonusClassToString(java.lang.String,java.lang.Integer[],java.lang.String[])
+        </function-signature>
+    </function>
+    <function>
+        <name>formatBonusClassManages</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>com.cndym.utils.bonusClass.BonusClassManager formatBonusClassManages(java.lang.String)
+        </function-signature>
+    </function>
+    <function>
+        <name>formatDltBonusClassShow</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatDltBonusClassShow(java.lang.String)
+        </function-signature>
+    </function>
+    <function>
+        <name>getDefaultBonusClassManagerByLotteryCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>com.cndym.utils.bonusClass.BonusClassManager
+            getDefaultBonusClassManagerByLotteryCode(java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>parseDouble</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Double parseDouble(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>findAllAdminName</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List findAllAdminName()</function-signature>
+    </function>
+
+    <function>
+        <name>purviewUrlFatherList</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List purviewUrlFatherList()</function-signature>
+    </function>
+
+    <function>
+        <name>purviewUrlList</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List purviewUrlList()</function-signature>
+    </function>
+
+    <function>
+        <name>getLotteryBeanByLotteryCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>com.cndym.lottery.lotteryInfo.bean.LotteryBean getLotteryBeanByLotteryCode(java.lang.String)
+        </function-signature>
+    </function>
+
+
+    <function>
+        <name>getLotteryBeanByLotteryPlayCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>com.cndym.lottery.lotteryInfo.bean.LotteryBean
+            getLotteryBeanByLotteryCode(java.lang.String,java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getPollName</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String
+            getPollName(java.lang.String,java.lang.String,java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getIssueStatus</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getIssueStatus(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getEventCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getEventCode(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getWeekStr</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getWeekStr(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getLotteryChinaName</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getLotteryChinaName(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getLotteryChinaNameFilter300</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getLotteryChinaNameFilter300(java.lang.String,java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>URLEncode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String URLEncode(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>bonusClass</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String bonusClass(java.lang.String,int)</function-signature>
+    </function>
+
+
+    <function>
+        <name>getBigBonus</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getBigBonus(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getPlayChinaName</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getPlayChinaName(java.lang.String,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>findAllLotteryPlayCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map findAllLotteryPlayCode()</function-signature>
+    </function>
+
+    <function>
+        <name>havePurview</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Boolean havePurview(java.util.Map,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getEventCodeType</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getEventCodeType(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>fullTag</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String fullTag(java.lang.String,int)</function-signature>
+    </function>
+    <function>
+        <name>userStatus</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String userStatus(int)</function-signature>
+    </function>
+    <function>
+        <name>getLock</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getLock()</function-signature>
+    </function>
+    <function>
+        <name>updateLock</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>void updateLock(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>stringToDouble</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Double stringToDouble(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>lotteryControl</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>int lotteryControl(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>lotterySendControl</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>int lotterySendControl(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getAllmanagesLogType</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map getAllmanagesLogType()</function-signature>
+    </function>
+
+    <function>
+        <name>getManagesLogType</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getMangesLogType(java.lang.Integer)</function-signature>
+    </function>
+
+    <function>
+        <name>getBonusDj</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getBonusDj(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getIssueBonusClass</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getIssueBonusClass(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>isBonusDouble</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String isBonusDouble(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>abs</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Double abs(java.lang.Double)</function-signature>
+    </function>
+    <function>
+        <name>buildSScIssue</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map buildSScIssue(java.lang.Integer)</function-signature>
+    </function>
+
+    <function>
+        <name>build115Issue</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map build115Issue(java.lang.Integer)</function-signature>
+    </function>
+
+
+    <function>
+        <name>getSort</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map getSort(java.util.List)</function-signature>
+    </function>
+    <function>
+        <name>getPurviewList</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getPurviewList(java.lang.String,java.util.List)</function-signature>
+    </function>
+
+    <function>
+        <name>getBonusClass</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getBonusClass(java.lang.String)</function-signature>
+    </function>
+
+
+    <function>
+        <name>bonusLogClass</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String bonusLogClass(java.lang.Integer,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>enCode</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String enCode(java.lang.String)
+        </function-signature>
+    </function>
+    <function>
+        <name>queryBanlance</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List queryBanlance()
+        </function-signature>
+    </function>
+
+    <function>
+        <name>sscDxdsNumber</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String sscDxdsNumber(java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>getOperatorsAwardMap</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map getOperatorsAwardMap()</function-signature>
+    </function>
+
+    <function>
+        <name>getOperatorsAward</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getOperatorsAward(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getBonusOperatorsMap</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map getBonusOperatorsMap()</function-signature>
+    </function>
+
+    <function>
+        <name>getBonusOperators</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getBonusOperators(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>rfspfScore</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String spfScore(java.lang.Integer,java.lang.Integer,java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>dxfScore</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String dxfScore(java.lang.Integer,java.lang.Integer,java.lang.String)
+        </function-signature>
+    </function>
+    <function>
+        <name>sfcScore</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String sfcScore(java.lang.Integer,java.lang.Integer)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>sxdsScore</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String sxdsScore(java.lang.Integer,java.lang.Integer)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>bfScoreForBeiDan</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String bfScoreForBeiDan(java.lang.Integer,java.lang.Integer)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>formatDateStr</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatDateStr(java.lang.String,java.lang.String,java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>diffNowTime</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String diffNowTime(java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>diffNowTimeSeconds</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>int diffNowTimeSeconds(java.util.Date)</function-signature>
+    </function>
+
+    <function>
+        <name>getPostMaps</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getPostMaps()</function-signature>
+    </function>
+
+    <function>
+        <name>getSidNameList</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getSidNameList()</function-signature>
+    </function>
+
+    <function>
+        <name>getPostCodeName</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getPostCodeName(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getTicketStatus</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getTicketStatus(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getExportMaxPage</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Integer getExportMaxPage()</function-signature>
+    </function>
+
+    <function>
+        <name>subOrderMatchList</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>com.cndym.servlet.manages.bean.SubTicketBean subOrderMatchList(java.lang.String)
+        </function-signature>
+    </function>
+
+    <function>
+        <name>formatDate2Str</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String formatDate2Str(java.util.Date,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getZzcSaleInfo</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.Map getZzcSaleInfo(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getMemberList</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.util.List getMemberList()</function-signature>
+    </function>
+
+    <function>
+        <name>getStiTime</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Boolean getStiTime(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getStiTime2</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Boolean getStiTime2(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getSyTime</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.String getSyTime(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getEndTime</name>
+        <function-class>com.cndym.servlet.ElTagUtils</function-class>
+        <function-signature>java.lang.Boolean getEndTime(java.lang.String,java.lang.String,java.lang.String)
+        </function-signature>
+    </function>
+</taglib>

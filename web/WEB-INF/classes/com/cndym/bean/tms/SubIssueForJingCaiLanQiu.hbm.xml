@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.SubIssueForJingCaiLanQiu" table="TMS_SUB_ISSUE_FOR_JCLQ">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_SUB_ISSUE_FOR_JCLQ</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="2"/>
+        <property name="pollCode" column="POLL_CODE" type="java.lang.String" length="2"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="10"/>
+        <property name="sn" column="SN" type="java.lang.String" length="10"/>
+        <property name="week" column="WEEK" type="java.lang.String" length="10"/>
+        <property name="matchId" column="MATCH_ID" type="java.lang.String" length="10"/>
+        <property name="matchColor" column="MATCH_COLOR" type="java.lang.String" length="10"/>
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="matchName" column="MATCH_NAME" type="java.lang.String" length="50"/>
+        <property name="mainTeam" column="MAIN_TEAM" type="java.lang.String" length="50"/>
+        <property name="guestTeam" column="GUEST_TEAM" type="java.lang.String" length="50"/>
+        <property name="endOperator" column="END_OPERATOR" type="java.lang.Integer"/>
+        <property name="bonusOperator" column="BONUS_OPERATOR" type="java.lang.Integer"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+
+        <property name="mainTeamHalfScore" column="MAIN_TEAM_HALF_SCORE" type="java.lang.Integer"/>
+        <property name="guestTeamHalfScore" column="GUEST_TEAM_HALF_SCORE" type="java.lang.Integer"/>
+        <property name="mainTeamScore" column="MAIN_TEAM_SCORE" type="java.lang.Integer"/>
+        <property name="guestTeamScore" column="GUEST_TEAM_SCORE" type="java.lang.Integer"/>
+        <property name="letBall" column="LET_BALL" type="java.lang.String" length="10"/>
+
+        <property name="winOrNegaSp" column="WIN_OR_NEGA_SP" type="java.lang.Double"/>
+        <property name="negaSp" column="NEGA_SP" type="java.lang.Double"/>
+        <property name="winSp" column="WIN_SP" type="java.lang.Double"/>
+
+        <property name="letWinOrNegaSp" column="LET_WIN_OR_NEGA_SP" type="java.lang.Double"/>
+        <property name="letNegaSp" column="LET_NEGA_SP" type="java.lang.Double"/>
+        <property name="letWinSp" column="LET_WIN_SP" type="java.lang.Double"/>
+
+        <property name="winNegaDiffSp" column="WIN_NEGA_DIFF_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffM1T5Sp" column="WIN_NEGA_DIFF_M_1T5_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffM6T10Sp" column="WIN_NEGA_DIFF_M_6T10_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffM11T15Sp" column="WIN_NEGA_DIFF_M_11T15_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffM16T20Sp" column="WIN_NEGA_DIFF_M_16T20_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffM21T25Sp" column="WIN_NEGA_DIFF_M_21T25_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffM26Sp" column="WIN_NEGA_DIFF_M_26_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffG1T5Sp" column="WIN_NEGA_DIFF_G_1T5_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffG6T10Sp" column="WIN_NEGA_DIFF_G_6T10_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffG11T15Sp" column="WIN_NEGA_DIFF_G_11T15_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffG16T20Sp" column="WIN_NEGA_DIFF_G_16T20_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffG21T25Sp" column="WIN_NEGA_DIFF_G_21T25_SP" type="java.lang.Double"/>
+        <property name="winNegaDiffG26Sp" column="WIN_NEGA_DIFF_G_26_SP" type="java.lang.Double"/>
+
+        <property name="bigOrLittleSp" column="BIG_OR_LITTLE_SP" type="java.lang.Double"/>
+        <property name="bigSp" column="BIG_SP" type="java.lang.Double"/>
+        <property name="littleSp" column="LITTLE_SP" type="java.lang.Double"/>
+
+        <property name="preCast" column="PRE_CAST" type="java.lang.String" length="10"/>
+
+        <property name="operatorsAward" column="OPERATORS_AWARD" type="java.lang.Integer"/>
+        <property name="endDanShiTime" column="END_DAN_SHI_TIME" type="java.util.Date"/>
+        <property name="endFuShiTime" column="END_FU_SHI_TIME" type="java.util.Date"/>
+        <property name="endStatus" column="END_STATUS" type="java.lang.Integer"/>
+        
+        <property name="inputAwardStatus" column="INPUT_AWARD_STATUS" type="java.lang.Integer"/>
+
+        <property name="backup1" column="BACKUP1" type="java.lang.String" length="255"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String" length="255"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String" length="255"/>
+    </class>
+</hibernate-mapping>

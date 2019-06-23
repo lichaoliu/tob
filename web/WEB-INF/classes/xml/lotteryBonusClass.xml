@@ -1,0 +1,98 @@
+<lotterys>
+	<lottery code="113" name="大乐透">
+		<award lv01="0" lv02="0" lv03="0" lv04="200" lv05="10" lv06="5" lv07="0" lv08="0" />
+		<award lv11="0" lv12="0" lv13="0" lv14="300" lv15="15" lv16="5" lv17="0" lv18="0" />
+		<award lv10="60" />
+		<title lv01="一等奖" lv02="二等奖" lv03="三等奖" lv04="四等奖" lv05="五等奖" lv06="六等奖" lv07="七等奖" lv08="八等奖" />
+		<title lv11="一等奖追加" lv12="二等奖追加" lv13="三等奖追加" lv14="四等奖追加" lv15="五等奖追加" lv16="六等奖追加" lv17="七等奖追加" lv18="八等奖追加" />
+		<title lv10="生肖乐" />
+	</lottery>
+
+	<lottery code="108" name="排列三">
+		<award lv01="1040" lv02="346" lv03="173" />
+		<title lv01="直选" lv02="组三" lv03="组六" />
+	</lottery>
+
+	<lottery code="109" name="排列五">
+		<award lv01="100000" />
+		<title lv01="一等奖" />
+	</lottery>
+
+	<lottery code="110" name="七星彩">
+		<award lv01="0" lv02="0" lv03="1800" lv04="300" lv05="20" lv06="5" />
+		<title lv01="一等奖" lv02="二等奖" lv03="三等奖" lv04="四等奖" lv05="五等奖" lv06="六等奖" />
+	</lottery>
+
+	<lottery code="111" name="22选5">
+		<award lv01="0" lv02="50" lv03="5" />
+		<title lv01="一等奖" lv02="二等奖" lv03="三等奖" />
+	</lottery>
+
+	<lottery code="107" name="11选5">
+		<award lv01="1170" lv02="540" lv03="195" lv04="130" lv05="90" lv06="78" lv07="65" lv08="26" lv09="19" lv10="13" lv11="9" lv12="6" />
+		<title lv01="选前三奖" lv02="任选五奖" lv03="选前三组选奖" lv04="选前二奖" lv05="任选六奖" lv06="任选四奖" lv07="选前二组选奖" lv08="任选七奖" lv09="任选三奖" lv10="任选一奖"
+			lv11="任选八奖" lv12="任选二奖" />
+	</lottery>
+
+	<lottery code="106" name="安徽11选5">
+		<award lv01="1170" lv02="540" lv03="195" lv04="130" lv05="90" lv06="78" lv07="65" lv08="26" lv09="19" lv10="13" lv11="9" lv12="6" />
+		<title lv01="选前三奖" lv02="任选五奖" lv03="选前三组选奖" lv04="选前二奖" lv05="任选六奖" lv06="任选四奖" lv07="选前二组选奖" lv08="任选七奖" lv09="任选三奖" lv10="任选一奖"
+			lv11="任选八奖" lv12="任选二奖" />
+	</lottery>
+	<!-- end体彩 -->
+
+	<!-- begin传统足彩 -->
+	<lottery code="300" name="胜负彩">
+		<award lv01="0" lv02="0" />
+		<title lv01="一等奖" lv02="二等奖" />
+	</lottery>
+
+	<lottery code="303" name="胜负彩">
+		<award lv01="0" />
+		<title lv01="任九奖" />
+	</lottery>
+
+	<lottery code="301" name="半全场">
+		<award lv01="0" />
+		<title lv01="一等奖" />
+	</lottery>
+
+	<lottery code="302" name="进球彩">
+		<award lv01="0" />
+		<title lv01="一等奖" />
+	</lottery>
+	<!-- end传统足彩 -->
+
+	<!-- begin福彩 -->
+	<lottery code="001" name="双色球">
+		<award lv01="0" lv02="0" lv03="3000" lv04="200" lv05="10" lv06="5" />
+		<title lv01="一等奖" lv02="二等奖" lv03="三等奖" lv04="四等奖" lv05="五等奖" lv06="六等奖" />
+	</lottery>
+
+	<lottery code="002" name="福彩3D">
+		<award lv01="1040" lv02="346" lv03="173" />
+		<title lv01="直选" lv02="组三" lv03="组六" />
+	</lottery>
+
+	<lottery code="003" name="15选5">
+		<award lv01="0" lv02="0" lv03="10" lv04="0" />
+		<title lv01="特等奖" lv02="一等奖" lv03="二等奖" lv04="加奖" />
+	</lottery>
+
+	<lottery code="004" name="七乐彩">
+		<award lv01="0" lv02="0" lv03="0" lv04="200" lv05="50" lv06="10" lv07="5" />
+		<title lv01="一等奖" lv02="二等奖" lv03="三等奖" lv04="四等奖" lv05="五等奖" lv06="六等奖" lv07="七等奖" />
+	</lottery>
+
+	<lottery code="005" name="东方6+1">
+		<award lv01="0" lv02="0" lv03="10000" lv04="500" lv05="50" lv06="5" />
+		<title lv01="一等奖" lv02="二等奖" lv03="三等奖" lv04="四等奖" lv05="五等奖" lv06="六等奖" />
+	</lottery>
+
+	<lottery code="006" name="时时彩">
+		<award lv01="100000" lv02="1000" lv03="100" lv04="10" lv05="4" lv06="50" lv07="20000" lv8="200" lv9="20" lv10="320" lv11="160" />
+		<title lv01="五星奖" lv02="三星奖" lv03="二星奖" lv04="一星奖" lv05="大小单双" lv06="二星组选" lv07="五星通选一等奖" lv8="五星通选二等奖" lv9="五星通选三等奖" lv10="三星组选三"
+			lv11="三星组选六" />
+	</lottery>
+	<!-- end福彩 -->
+</lotterys>

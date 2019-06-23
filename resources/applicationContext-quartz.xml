@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	default-lazy-init="true">
+
+
+	<description>Quartz的定时集群任务配置</description>
+
+
+	<!-- Quartz集群Schduler -->
+	<bean id="clusterQuartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<!-- Triggers集成 -->
+		<property name="triggers">
+			<list>
+				<ref bean="accountTrigger" />
+				<ref bean="issueTrigger" />
+				<ref bean="orderTrigger" />
+				<ref bean="cancelOrderTrigger" />
+				<ref bean="endIssueTicketFailedTrigger" />
+				<ref bean="accountTableTrigger" />
+				<ref bean="jingJiIssueEndTrigger" />
+				<ref bean="commonOrderQueryTrigger"/>
+
+				
+
+			
+
+
+
+				<ref bean="ltkjIssueQueryTrigger"/>
+				<ref bean="ltkjOrderQueryTrigger"/>
+				<ref bean="ltkjGpOrderQueryTrigger"/>
+				<ref bean="ltkjGpIssueQueryTrigger"/>
+				<ref bean="ltkjGpBonusInfoQueryTrigger"/>
+				<ref bean="ltkjSZCBonusInfoQueryTrigger"/>
+				<ref bean="ltkjGpBonusQueryTrigger"/>
+
+			
+			</list>
+		</property>
+		<!-- quartz配置文件路径 -->
+		<property name="configLocation" value="classpath:quartz.properties" />
+		<!-- 启动时延期2秒开始任务 -->
+		<!--<property name="startupDelay" value="2" /> -->
+		<!-- 保存Job数据到数据库所需的数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- Job接受applicationContext的成员变量名 -->
+		<property name="applicationContextSchedulerContextKey" value="applicationContext" />
+	</bean>
+	<!-- account Trigger定义 -->
+	<bean id="accountTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="accountJobDetail" />
+		<property name="startDelay" value="20000" />
+		<!-- 每次执行间隔30秒 -->
+		<property name="repeatInterval" value="30000" />
+	</bean>
+	<!-- account JobDetail, 基于JobDetailBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="accountJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.AccountOperatorJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+
+	<!-- issue式 Trigger定义 -->
+	<bean id="issueTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="issueJobDetail" />
+		<property name="startDelay" value="10000" />
+		<!-- 每次执行间隔10秒 -->
+		<property name="repeatInterval" value="10000" />
+	</bean>
+
+	<!-- issue JobDetail, 基于JobDetailBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="issueJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.IssueClusterableJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+
+	<!-- order式 Trigger定义 -->
+	<bean id="orderTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="orderJobDetail" />
+		<property name="startDelay" value="20000" />
+		<!-- 每次执行间隔10秒 -->
+		<property name="repeatInterval" value="20000" />
+	</bean>
+
+	<!-- order JobDetail, 基于JobDetailBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="orderJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.OrderClusterableJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+
+	<!-- cancelOrder式 Trigger定义 -->
+	<bean id="cancelOrderTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="cancelOrderJobDetail" />
+		<property name="startDelay" value="20000" />
+		<property name="repeatInterval" value="120000" />
+	</bean>
+	<bean name="cancelOrderJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.CancelOrderOperatorJobBean" />
+		<property name="requestsRecovery" value="true" />
+	</bean>
+	<!-- endIssueTicketFailed式 Trigger定义 -->
+	<bean id="endIssueTicketFailedTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="endIssueTicketFailedJobDetail" />
+		<property name="startDelay" value="10000" />
+		<property name="repeatInterval" value="10000" />
+	</bean>
+	<bean name="endIssueTicketFailedJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.EndIssueTicketFailedJobBean" />
+		<property name="requestsRecovery" value="true" />
+	</bean>
+
+	<!-- bonusQuery式 Trigger定义 -->
+	<bean id="jingJiIssueEndTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="jingJiIssueEndJobDetail" />
+		<property name="startDelay" value="170000" />
+		<!-- 每次执行间隔30分 -->
+		<property name="repeatInterval" value="120000" />
+	</bean>
+	<!-- bonusQuery JobDetail, 基于DeleteFillWaitBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="jingJiIssueEndJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.JingJiIssueEndJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+
+
+
+
+	
+	<!-- #################################### auto Job ############################################## -->
+	<!-- auto开奖公告查询 Trigger定义 -->
+	<bean id="autoGpBonusInfoQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="autoGpBonusInfoQueryJobDetail" />
+		<property name="startDelay" value="50000" />
+		<!-- 每次执行间隔30秒 -->
+		<property name="repeatInterval" value="30000" />
+	</bean>
+	<!-- auto开奖公告查询查询 JobDetail, 基于DeleteFillWaitBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="autoGpBonusInfoQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.autotest.AutoGpBonusInfoQueryJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+
+	<!-- auto高频开奖查询 Trigger定义 -->
+	<bean id="autoGpBonusQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="autoGpBonusQueryJobDetail" />
+		<property name="startDelay" value="50000" />
+		<!-- 每次执行间隔15秒 -->
+		<property name="repeatInterval" value="30000" />
+	</bean>
+	<!-- auto高频开奖查询 JobDetail, 基于DeleteFillWaitBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="autoGpBonusQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.autotest.AutoGpBonusQueryJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+	<!-- #################################### auto Job ############################################## -->
+	
+    <!-- #################################### ltkj Job start ############################################ -->
+    <bean id="ltkjOrderQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="ltkjOrderQueryJobDetail"/>
+        <property name="startDelay" value="10000"/>
+        <property name="repeatInterval" value="10000"/>
+    </bean>
+    <bean name="ltkjOrderQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.ltkj.LtkjOrderQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+    <bean id="ltkjIssueQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="ltkjIssueQueryJobDetail"/>
+        <property name="startDelay" value="10000"/>
+        <property name="repeatInterval" value="10000"/>
+    </bean>
+    <bean name="ltkjIssueQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.ltkj.LtkjIssueQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+    <bean id="ltkjGpOrderQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="ltkjGpOrderQueryJobDetail"/>
+        <property name="startDelay" value="10000"/>
+        <property name="repeatInterval" value="10000"/>
+    </bean>
+    <bean name="ltkjGpOrderQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.ltkj.LtkjGpOrderQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+
+    <bean id="ltkjGpIssueQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="ltkjGpIssueQueryJobDetail"/>
+        <property name="startDelay" value="10000"/>
+        <property name="repeatInterval" value="10000"/>
+    </bean>
+    <bean name="ltkjGpIssueQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.ltkj.LtkjGpIssueQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+
+    <bean id="ltkjGpBonusInfoQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="ltkjGpBonusInfoQueryJobDetail"/>
+        <property name="startDelay" value="20000"/>
+        <property name="repeatInterval" value="20000"/>
+    </bean>
+    <bean name="ltkjGpBonusInfoQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.ltkj.LtkjGpBonusInfoQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+
+
+
+	<!--ltkj szc-->
+	<bean id="ltkjSZCBonusInfoQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="ltkjSZCBonusInfoQueryJobDetail"/>
+		<property name="startDelay" value="20000"/>
+		<property name="repeatInterval" value="20000"/>
+	</bean>
+	<bean name="ltkjSZCBonusInfoQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.ltkj.LtkjSZCBonusInfoQueryJobBean"/>
+		<property name="requestsRecovery" value="true"/>
+	</bean>
+
+
+    <bean id="ltkjGpBonusQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="ltkjGpBonusQueryJobDetail"/>
+        <property name="startDelay" value="20000"/>
+        <property name="repeatInterval" value="20000"/>
+    </bean>
+    <bean name="ltkjGpBonusQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.ltkj.LtkjGpBonusQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+    <!-- #################################### ltkj Job end ############################################ -->
+    
+    <!-- #################################### common Job start ########################################## -->
+    <bean id="commonOrderQueryTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="commonOrderQueryJobDetail"/>
+        <property name="startDelay" value="10000"/>
+        <property name="repeatInterval" value="10000"/>
+    </bean>
+    <bean name="commonOrderQueryJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.cndym.quartz.CommonOrderQueryJobBean"/>
+        <property name="requestsRecovery" value="true"/>
+    </bean>
+	<!-- #################################### common Job start ########################################## -->
+
+	<!-- 账户日报表 Trigger定义 -->
+	<bean id="accountTableTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="accountTableJobDetail" />
+		<property name="cronExpression" value="0 0 0 * * ?" />
+	</bean>
+
+	<!-- 账户日报表 JobDetail, 基于DeleteFillWaitBean实例化Job Class,可持久化到数据库实现集群 -->
+	<bean name="accountTableJobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.cndym.quartz.AccountTableJobBean" />
+		<!-- fail-over节点重新执行之前所有失败或未执行的任务, 默认为false. -->
+		<property name="requestsRecovery" value="true" />
+	</bean>
+	
+	<!-- Timer Job的可配置属性 -->
+	<util:map id="timerJobConfig">
+		<entry key="nodeName" value="${QUARTZ.NODE.NAME}" />
+	</util:map>
+</beans>

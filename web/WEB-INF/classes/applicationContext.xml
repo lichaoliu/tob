@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       		http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd 
+			http://www.springframework.org/schema/tx   
+        	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+			http://www.springframework.org/schema/aop   
+        	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.cndym"/>
+
+    <import resource="applicationContext-memcached.xml"/>
+	<import resource="applicationContext-email.xml"/>
+	<import resource="applicationContext-jms.xml"/>
+	<!-- import resource="applicationContext-quartz.xml"/ -->
+
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:config.properties</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="username" value="${ORACLE.DATASOURCE.USERNAME}"/>
+        <property name="password" value="${ORACLE.DATASOURCE.PASSWORD}"/>
+        <property name="url" value="${ORACLE.DATASOURCE.URL}"/>
+        <property name="driverClassName" value="${ORACLE.DATASOURCE.DRIVERCLASSNAME}"/>
+        <property name="maxActive" value="${ORACLE.DATASOURCE.MAXACTIVE}"/>
+        <property name="logAbandoned" value="${ORACLE.DATASOURCE.LOGABANDONED}"/>
+        <property name="validationQuery" value="SELECT COUNT(*) FROM DUAL"/>
+        <property name="maxIdle" value="${ORACLE.DATASOURCE.MAXIDLE}"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${ORACLE.HIBERNATE.DIALECT}</prop>
+<!--
+                <prop key="hibernate.dialect">${HIBERNATE.DIALECT}</prop>
+-->
+                <prop key="hibernate.show_sql">${HIBERNATE.SHOWSQL}</prop>
+                <prop key="hibernate.jdbc.batch_size">${HIBERNATE.JDBC.BATCHSIZE}</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">${HIBERNATE.HBM2DDL.AUTO}</prop>-->
+            </props>
+        </property>
+        <property name="mappingDirectoryLocations">
+            <list>
+                <value>${HIBERNATE.BEAN.PATH}</value>
+            </list>
+        </property>
+
+    </bean>
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="transactionInteceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionAttributes">
+            <props>
+                <prop key="do*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="proxyTargetClass" value="false"/>
+        <property name="interceptorNames">
+            <list>
+                <value>transactionInteceptor</value>
+            </list>
+        </property>
+        <property name="beanNames">
+            <list>
+                <value>${HIBERNATE.TRANSACTIONMANAGER}</value>
+            </list>
+        </property>
+    </bean>
+</beans>

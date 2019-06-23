@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.WeightPlay" table="TMS_WEIGHT_PLAY">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_WEIGHT_PLAY</param>
+            </generator>
+        </id>
+        
+		<property name="weightId" column="WEIGHT_ID" type="java.lang.Integer"/>
+		<property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+		<property name="playCodes" column="PLAY_CODES" type="java.lang.String" length="255"/>
+		<property name="pollCodes" column="POLL_CODES" type="java.lang.String" length="255"/>
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="45"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.SubIssueForGjb" table="TMS_SUB_ISSUE_FOR_GJB">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_SUB_ISSUE_FOR_GJB</param>
+            </generator>
+        </id>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="20"/>
+        <property name="sn" column="SN" type="java.lang.String" length="10"/>
+        <property name="league" column="LEAGUE" type="java.lang.String" length="50"/>
+        <property name="team" column="TEAM" type="java.lang.String" length="50"/>
+        <property name="sp" column="SP" type="java.lang.Double"/>
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="status" column="STATUS" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

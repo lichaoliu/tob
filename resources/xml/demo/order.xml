@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+    <header>
+        <sid>800001</sid>
+        <cmd>001</cmd>
+        <digestType>md5</digestType>
+        <digest>8123f913e123e123990028d9c72e013c</digest>
+    </header>
+    <body>
+        <!-- 投注请求 -->
+        <order userInfo="真实姓名_身份证号码_手机号码" lotteryId="彩种编号(彩种编号)" issue="期次" playId="玩法编号" orderId="批次号">
+            <ticket ticketId="渠道商票号" item="注数" multiple="倍数" amount="金额" pollId="购买方式"><![CDATA[投注号码]]></ticket>
+            <ticket ticketId="渠道商票号" item="注数" multiple="倍数" amount="金额" pollId="购买方式"><![CDATA[投注号码]]></ticket>
+        </order>
+    </body>
+</message>

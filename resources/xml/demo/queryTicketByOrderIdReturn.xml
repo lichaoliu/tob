@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<header>
+		<sid>8001</sid>
+		<cmd>012</cmd>
+		<digestType>md5</digestType>
+		<digest>8123f913e123e123990028d9c72e013c</digest>
+	</header>
+	<body>
+		<response code="" msg="系统处理成功">
+			<ticket ticketId="投注订单号" sysId="" saleCode="" lotteryId="彩种" issue="期次" amount="投注金额" status="状态(0 等待交易 1交易中 2 交易成功 3 交易失败)"
+				bonusStatus="中奖状态（0 等待开奖 1中奖 2未中奖）" bonusAmount="中奖金额" printTime="出票时间" orderId="" fixBonusAmount="">
+				<odds></odds>
+				<bonusClass><![CDATA[0,0,1,0,0,0]]></bonusClass>
+			</ticket>
+			<ticket ticketId="投注订单号" sysId="" saleCode="" lotteryId="彩种" issue="期次" amount="投注金额" status="状态(0 等待交易 1交易中 2 交易成功 3 交易失败)"
+				bonusStatus="中奖状态（0 等待开奖 1中奖 2未中奖）" bonusAmount="中奖金额" printTime="出票时间" orderId="" fixBonusAmount="">
+				<odds></odds>
+				<bonusClass><![CDATA[0,0,1,0,0,0]]></bonusClass>
+			</ticket>
+		</response>
+	</body>
+</message>

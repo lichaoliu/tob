@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.SubGame" table="TMS_SUB_GAME">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_SUB_GAME</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="issue" column="ISSUE" type="java.lang.String"/>
+        <property name="startTime" column="START_TIME" type="java.util.Date" />
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="index" column="INDEX_ID" type="java.lang.Integer"/>
+        <property name="leageName" column="LEAGE_NAME" type="java.lang.String"/>
+        <property name="masterName" column="MASTER_NAME" type="java.lang.String"/>
+        <property name="guestName" column="GUEST_NAME" type="java.lang.String"/>
+        <property name="result" column="RESULT" type="java.lang.String"/>
+        <property name="resultDes" column="RESULT_DES" type="java.lang.String"/>
+        <property name="finalScore" column="FINAL_SCORE" type="java.lang.String"/>
+        <property name="scoreAtHalf" column="SCORE_AT_HALF" type="java.lang.String"/>
+        <property name="secondHalfTheScore" column="SECOND_HALF_THE_SCORE" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

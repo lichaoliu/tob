@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.count.AccountTable" table="COUNT_ACCOUNT_TABLE">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_COUNT_ACCOUNT_TABLE</param>
+            </generator>
+        </id>
+        <property name="currDate" column="CURR_DATE" type="java.lang.String"/>
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="name" column="NAME" type="java.lang.String" length="50"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusNum" column="BONUS_NUM" type="java.lang.Long"/>
+        <property name="payAmount" column="PAY_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="payNum" column="PAY_NUM" type="java.lang.Long"/>
+        <property name="commissionAmount" column="COMMISSION_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="commissionNum" column="COMMISSION_NUM" type="java.lang.Long"/>
+        <property name="failureAmount" column="FAILURE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="failureNum" column="FAILURE_NUM" type="java.lang.Long"/>
+        <property name="editAccountJia" column="EDIT_ACCOUNT_JIA" type="java.lang.Double" length="15" scale="2"/>
+        <property name="editAccountJian" column="EDIT_ACCOUNT_JIAN" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmountNew" column="BONUS_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="rechargeAmountNew" column="RECHARGE_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="presentAmountNew" column="PRESENT_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="freezeAmountNew" column="FREEZE_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

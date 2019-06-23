@@ -1,0 +1,5 @@
+body{padding:10px; margin:0px;}
+table{border-collapse:collapse;border:1px solid #999;}
+td,div,span,input,textarea{font-family:"微软雅黑",Verdana, Geneva, sans-serif; font-size:12px; color:#333}
+td,div,span{padding:2px;}
+td{border:1px solid #999;}

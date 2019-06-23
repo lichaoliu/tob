@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<header>
+		<sid>8001</sid>
+		<cmd>010</cmd>
+		<digestType>md5</digestType>
+		<digest>8123f913e123e123990028d9c72e013c</digest>
+	</header>
+	<body>
+		<!-- 数字彩期次查询返回 -->
+		<response code="" msg="系统处理成功">
+			<issue name="期次" lotteryId="彩种编号" startTime="官方开始时间" endTime="官方停止时间" status="状态(0未开售,1销售中,2已截止,3已开奖,4已返奖)" bonusTime="开奖时间"
+				bonusNumber="开奖号码" bonusTotal="中奖总金额" prizePool="下期奖池信息" globalSaleTotal="全国销量">
+				<bonusClass><![CDATA[-]]></bonusClass>
+			</issue>
+		</response>
+	</body>
+</message>

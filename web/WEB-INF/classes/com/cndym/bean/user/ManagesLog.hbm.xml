@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.user.ManagesLog" table="USER_MANAGES_LOG">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_MANAGES_LOG</param>
+            </generator>
+        </id>
+        <property name="adminName" column="ADMIN_NAME" type="java.lang.String" length="45"/>
+        <property name="type" column="TYPE" type="java.lang.String" length="50" />
+        <property name="description" column="DESCRIPTION" type="java.lang.String" length="255"  />
+        <property name="ip" column="IP" type="java.lang.String" length="50"  />
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="operatingType" column="OPERATING_TYPE" type="java.lang.Integer" length="2" />
+    </class>
+</hibernate-mapping>

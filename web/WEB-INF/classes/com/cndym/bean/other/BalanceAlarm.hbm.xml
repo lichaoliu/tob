@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.other.BalanceAlarm" table="OTHER_BALANCE_ALARM">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_OTHER_BALANCE_ALARM</param>
+            </generator>
+        </id>
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="balanceAmount" column="BALANCE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="mobile" column="MOBILE" type="java.lang.String" length="255"/>
+        <property name="email" column="EMAIL" type="java.lang.String" length="255"/>
+        <property name="context" column="CONTEXT" type="java.lang.String" length="100"/>
+        <property name="count" column="COUNT" type="java.lang.Integer"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

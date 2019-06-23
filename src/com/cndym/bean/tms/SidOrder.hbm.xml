@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.SidOrder" table="TMS_SID_ORDER">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_SID_ORDER</param>
+            </generator>
+        </id>
+        <property name="sid" column="sid" type="java.lang.String" length="20"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="32"/>
+        <property name="sidOrderId" column="SID_ORDER_ID" type="java.lang.String" length="100"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

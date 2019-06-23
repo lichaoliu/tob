@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- 基本元素 -->
+    <xs:element name="sid">
+        <xs:simpleType>
+            <xs:restriction base="xs:token"/>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="cmd">
+        <xs:simpleType>
+            <xs:restriction base="xs:token"/>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="digestType">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="md5"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="digest" type="xs:token"/>
+    <xs:element name="body"/>
+
+    <!-- 复合元素 -->
+    <xs:element name="message">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="header"/>
+                <xs:element ref="body"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="header">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="sid"/>
+                <xs:element ref="cmd"/>
+                <xs:element ref="digestType"/>
+                <xs:element ref="digest"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.user.AccountLog" table="USER_ACCOUNT_LOG">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_ACCOUNT_LOG</param>
+            </generator>
+        </id>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="40"/>
+        <property name="ticketId" column="TICKET_ID" type="java.lang.String" length="40"/>
+        <property name="sid" column="sid" type="java.lang.String" length="40"/>
+        <property name="eventType" column="EVENT_TYPE" type="java.lang.Integer" length="1"/>
+        <property name="eventCode" column="EVENT_CODE" type="java.lang.String" length="5"/>
+        <property name="type" column="TYPE" type="java.lang.String" length="5"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="rechargeAmount" column="RECHARGE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="freezeAmount" column="FREEZE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmountNew" column="BONUS_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="rechargeAmountNew" column="RECHARGE_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="presentAmountNew" column="PRESENT_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="freezeAmountNew" column="FREEZE_AMOUNT_NEW" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="index" column="LOG_INDEX" type="java.lang.String" length="200"/>
+        <property name="memo" column="MEMO" type="java.lang.String" length="100"/>
+        <property name="backup1" column="backup1" type="java.lang.String" length="45"/>
+        <property name="backup2" column="backup2" type="java.lang.String" length="45"/>
+        <property name="backup3" column="backup3" type="java.lang.String" length="45"/>
+    </class>
+</hibernate-mapping>

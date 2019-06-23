@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.cndym.bean.tms.BonusLog" table="TMS_BONUS_LOG">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_TMS_BONUS_LOG</param>
+			</generator>
+		</id>
+		<property name="ticketId" column="TICKET_ID" type="java.lang.String" length="50" />
+		<property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="30" />
+		<property name="issue" column="ISSUE" type="java.lang.String" length="20" />
+		<property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" />
+		<property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2" />
+		<property name="bigBonus" column="BIG_BONUS" type="java.lang.Integer" />
+		<property name="bonusClass" column="BONUS_CLASS" type="java.lang.String" length="500" />
+		<property name="createTime" column="CREATE_TIME" type="java.util.Date" />
+		<property name="postCode" column="POST_CODE" type="java.lang.String" />
+		<property name="saleCode" column="SALE_CODE" type="java.lang.String" />
+		<property name="duiJiangStatus" column="DUI_JIANG_STATUS" type="java.lang.Integer" />
+		<property name="saleTime" column="SALE_TIME" type="java.lang.String" />
+		<property name="machineCode" column="MACHINE_CODE" type="java.lang.String" />
+		<property name="sendBonusTime" column="SEND_BONUS_TIME" type="java.util.Date" />
+		<property name="errorCode" column="ERROR_CODE" type="java.lang.String" />
+		<property name="errorMsg" column="ERROR_MSG" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

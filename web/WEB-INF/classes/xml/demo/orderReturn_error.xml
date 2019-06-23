@@ -1,0 +1,16 @@
+<messages>
+    <header>
+        <sid><![CDATA[8001]]></sid>
+        <cmd><![CDATA[001]]></cmd>
+        <digestType><![CDATA[md5]]></digestType>
+        <digest><![CDATA[a46bac8bdacb27552fd037670aad8c3e]]></digest>
+    </header>
+    <body>
+        <response code="8105" msg="投注期次已截期">
+            <!-- 商户批次号 -->
+            <order orderId="041351475401414085666238532418"></order>
+        </response>
+    </body>
+</messages>
+
+        

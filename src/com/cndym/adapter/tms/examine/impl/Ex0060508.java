@@ -1,0 +1,44 @@
+package com.cndym.adapter.tms.examine.impl;
+
+import org.springframework.stereotype.Component;
+
+import com.cndym.adapter.tms.examine.BashExamina;
+import com.cndym.adapter.tms.examine.IExamine;
+import com.cndym.adapter.tms.examine.utils.NumberAreaExamine;
+import com.cndym.adapter.tms.examine.utils.NumberLengthExamine;
+import com.cndym.adapter.tms.examine.utils.NumberTagExamine;
+
+/**
+ * *USER:MengJingyi
+ * *TIME:2011 2011-7-16 下午07:27:11
+ */
+
+@Component
+public class Ex0060508 extends BashExamina implements IExamine {
+
+    @Override
+    public void examina(String number, int item) {
+        String ztag = ";";
+        String[] nums = number.split(ztag);
+        int ticket = getTicketCount("0060508");
+        if(nums.length > ticket){
+            throw new IllegalArgumentException("最多（" + ticket + "）票,实际" + nums.length);
+        }
+        for (String num : nums) {
+            //校验格式
+            NumberTagExamine.commaNumberTagExamine(num);//号码中分隔符的验证
+            NumberLengthExamine.defaultNumberLengthExamine(num, ",", 5, 0);//号码个数的验证
+            NumberAreaExamine.defaultNumberAraeExamine(num.split(","), 0, 9, 1);//号码域验证
+        }
+        //校验注数
+        if (item != nums.length) {
+            throw new IllegalArgumentException("实际注数(" + nums.length + ")不等于传入(" + item + ")");
+        }
+    }
+
+    public static void main(String[] args) {
+        Ex0060508 ex0060508 = new Ex0060508();
+        ex0060508.examina("1,2,3,4,5;1,2,3,4,5;1,2,3,4,5", 3);
+        System.out.println("ok");
+    }
+}

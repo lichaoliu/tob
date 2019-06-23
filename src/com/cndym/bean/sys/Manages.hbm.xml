@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.sys.Manages" table="SYS_MANAGES">
+        <id name="id" column="ID">
+			<generator class="sequence">
+                <param name="sequence">SEQ_SYS_MANAGES</param>
+            </generator>
+		</id>
+        <property name="userName" column="USER_NAME" type="java.lang.String" length="45"/>
+        <property name="passWord" column="PASS_WORD" type="java.lang.String" length="45"/>
+        <property name="mobile" column="MOBILE" type="java.lang.String" length="20"/>
+        <property name="loginIp" column="LOGIN_IP" type="java.lang.String" length="30"/>
+        <property name="loginTime" column="LOGIN_TIME" type="java.util.Date"/>
+        <property name="body" column="BODY" type="java.lang.String"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="phone" column="PHONE" type="java.lang.String"/>
+        <property name="departments" column="DEPARTMENTS" type="java.lang.String"/>
+        <property name="post" column="POST" type="java.lang.String"/>
+        <property name="email" column="EMAIL" type="java.lang.String"/>
+        <property name="realName" column="REAL_NAME" type="java.lang.String"/>
+        <property name="permissions" column="PERMISSIONS" type="java.lang.String" length="255"/>
+        <property name="status" column="STATUS" type="java.lang.Integer"/>
+        <property name="type" column="TYPE" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

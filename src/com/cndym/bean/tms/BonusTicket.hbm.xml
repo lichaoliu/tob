@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.BonusTicket" table="TMS_BONUS_TICKET">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_BONUS_TICKET</param>
+            </generator>
+        </id>
+        <property name="sid" column="sid" type="java.lang.String" length="10"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="45"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="30"/>
+        <property name="ticketId" column="TICKET_ID" type="java.lang.String" length="30"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="2"/>
+        <property name="pollCode" column="POLL_CODE" type="java.lang.String" length="2"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="20"/>
+        <property name="postCode" column="POST_CODE" type="java.lang.String" length="2"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="bonusClass" column="BONUS_CLASS" type="java.lang.String"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double"/>
+        <property name="outTicketId" column="OUT_TICKET_ID" type="java.lang.String"/>
+        <property name="startGameId" column="START_GAME_ID" type="java.lang.String"/>
+        <property name="endGameId" column="END_GAME_ID" type="java.lang.String"/>
+        <property name="sendTime" column="SEND_TIME" type="java.util.Date"/>
+        <property name="returnTime" column="RETURN_TIME" type="java.util.Date"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+        <property name="bigBonus" column="BIG_BONUS" type="java.lang.Integer"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

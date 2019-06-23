@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.admin.AlertAmountTable" table="TMS_ALERT_AMOUNT">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_ALERT_AMOUNT</param>
+            </generator>
+        </id>
+        <property name="postCode" column="POST_CODE" type="java.lang.String" length="2"/>
+        <property name="postName" column="POST_NAME" type="java.lang.String" length="100"/>
+        <property name="alertAmount" column="ALERT_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="100"/>
+        <property name="status" column="STATUS" type="java.lang.String" length="2"/>
+        <property name="statusTime" column="STATUS_TIME" type="java.util.Date"/>
+        <property name="remark" column="REMARK" type="java.lang.String" length="200"/>
+    </class>
+</hibernate-mapping>

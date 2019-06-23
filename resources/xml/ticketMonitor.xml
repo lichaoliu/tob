@@ -1,0 +1,32 @@
+<lotterys>
+	<lottery code="113" name="大乐透" startTime="11:30:00" endTime="23:59:59" isTrue="true" type="1" issue="0"/>
+	<lottery code="108" name="排列三" startTime="11:30:00" endTime="23:59:59" isTrue="true" type="1" issue="0"/>
+	<lottery code="109" name="排列五" startTime="11:30:00" endTime="23:59:59" isTrue="true" type="1" issue="0"/>
+	<lottery code="110" name="七星彩" startTime="11:30:00" endTime="23:59:59" isTrue="true" type="1" issue="0"/>
+	<lottery code="105" name="广东11选5" startTime="08:15:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="106" name="安徽11选5" startTime="08:15:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="107" name="山东11选5" startTime="08:10:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="104" name="重庆11选5" startTime="08:10:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="103" name="新疆11选5" startTime="02:00:00" endTime="02:00:00" isTrue="true" type="5" issue="0"/>
+	<lottery code="102" name="黑龙江11选5" startTime="08:30:00" endTime="22:06:00" isTrue="true" type="5" issue="0"/>
+
+	<lottery code="001" name="双色球" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="0" issue="0"/>
+	<lottery code="002" name="福彩3D" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="0" issue="0"/>
+	<lottery code="004" name="七乐彩" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="0" issue="0"/>
+	<lottery code="006" name="重庆时时彩" startTime="23:59:59" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="008" name="湖北时时彩" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="009" name="江西时时彩" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="007" name="湖北快3" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="010" name="安徽快3" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+	<lottery code="011" name="江苏快3" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="5" issue="0"/>
+
+	<lottery code="400" name="北京单场" startTime="23:59:59" endTime="23:59:59" isTrue="true" type="4" issue="0"/>
+
+	<lottery code="300" name="胜负彩" startTime="09:00:00" endTime="23:59:59" isTrue="false" type="3" issue="0"/>
+	<lottery code="301" name="半全场" startTime="09:00:00" endTime="23:59:59" isTrue="false" type="3" issue="0"/>
+	<lottery code="302" name="进球彩" startTime="09:00:00" endTime="23:59:59" isTrue="false" type="3" issue="0"/>
+	<lottery code="303" name="任九场" startTime="09:00:00" endTime="23:59:59" isTrue="false" type="3" issue="0"/>
+
+	<lottery code="200" name="竞彩足球" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="2" issue="0"/>
+	<lottery code="201" name="竞彩篮球" startTime="09:00:00" endTime="23:59:59" isTrue="true" type="2" issue="0"/>
+</lotterys>

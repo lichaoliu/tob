@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.CheckTicket" table="TMS_CHECK_TICKET">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_CHECK_TICKET</param>
+            </generator>
+        </id>
+        <property name="sid" column="SID" type="java.lang.String" length="20"/>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="45"/>
+        <property name="orderId" column="ORDER_ID" type="java.lang.String" length="32"/>
+        <property name="ticketId" column="TICKET_ID" type="java.lang.String" length="32"/>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="playCode" column="PLAY_CODE" type="java.lang.String" length="2"/>
+        <property name="pollCode" column="POLL_CODE" type="java.lang.String" length="2"/>
+        <property name="issue" column="ISSUE" type="java.lang.String" length="20"/>
+        <property name="postCode" column="POST_CODE" type="java.lang.String" length="2"/>
+        <property name="item" column="ITEM" type="java.lang.Integer"/>
+        <property name="outTicketId" column="OUT_TICKET_ID" type="java.lang.String" length="32"/>
+        <property name="multiple" column="MULTIPLE" type="java.lang.Integer"/>
+        <property name="ticketStatusDiff" column="TICKET_STATUS_DIFF" type="java.lang.Integer" length="1"/>
+        <property name="upTicketStatus" column="UP_TICKET_STATUS" type="java.lang.String"/>
+        <property name="upTicketStatusDesc" column="UP_TICKET_STATUS_DESC" type="java.lang.String"/>
+        <property name="ticketStatus" column="TICKET_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="checkAmountStatus" column="CHECK_AMOUNT_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="checkBonusStatus" column="CHECK_BONUS_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="checkTicketStatus" column="CHECK_TICKET_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="amount" column="AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="fixBonusAmount" column="FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+       	<property name="upAmount" column="UP_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="upFixBonusAmount" column="UP_FIX_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="upBonusAmount" column="UP_BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="amountDiff" column="AMOUNT_DIFF" type="java.lang.Double" length="15" scale="2"/>
+        <property name="fixBonusAmountDiff" column="FIX_BONUS_AMOUNT_DIFF" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusAmountDiff" column="BONUS_AMOUNT_DIFF" type="java.lang.Double" length="15" scale="2"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="sendTime" column="SEND_TIME" type="java.util.Date"/>
+        <property name="returnTime" column="RETURN_TIME" type="java.util.Date"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+        <property name="bigBonus" column="BIG_BONUS" type="java.lang.Integer"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+        <property name="checkTime" column="CHECK_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

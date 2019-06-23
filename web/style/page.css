@@ -1,0 +1,25 @@
+#page a:link,#page a:visited,#page a:hover,#page .current,#page .info{
+border:1px solid #fff;
+display:inline-block;
+margin:1px;
+text-decoration:none;
+font-size:12px;
+text-align:center;
+color:#0033cc;
+padding:4px 4px;
+font-weight: bold;
+}
+#page a:hover{
+border:1px solid #E5E5E5;
+background:#F9F9F9;
+color:#333333;
+}
+#page .current{
+border:1px solid #83E7E4;
+background:#DFF9F8;
+margin:1px;
+color:#27CBC7;
+}
+#page info{
+width:auto;
+}

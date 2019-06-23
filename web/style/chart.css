@@ -1,0 +1,206 @@
+body {
+color:#444444;
+font:12px "宋体";
+text-align:left;
+}
+
+td {
+margin:0;
+padding:0;
+text-align:center;
+font:12px "宋体";
+}
+
+.tb3 {
+border-color:#777F8D #777F8D -moz-use-text-color;
+border-style:solid solid none;
+border-width:1px 1px medium;
+}
+
+.t1 td,.t2 td,.endTime,.count{
+background-color:#CCDDFF;
+border-color:#FFFFFF #777F8D #777F8D #FFFFFF;
+border-style:solid;
+border-width:1px;
+}
+
+.dotlitt {
+font:11px Arial,Helvetica,sans-serif;
+}
+
+.borbottom {
+color:#F3F7FF;
+cursor:pointer;
+}
+
+.borbottom, .dotlitt {
+background-color:#F3F7FF;
+border-color:#FFFFFF #C9DAFF #C9DAFF #FFFFFF;
+border-style:solid;
+border-width:1px;
+height:18px;
+width:20px;
+}
+
+.t1{
+height:24px;
+line-height:16px;
+}
+
+.issue,.sum,.kd {
+background-color:#F3F2F2;
+border-color:#FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+border-style:solid;
+border-width:1px;
+white-space:nowrap;
+}
+.KjCode {
+background-color: #FFFEE9;
+border-bottom: 1px solid #DDD;
+border-left: 1px solid white;
+border-top: 1px solid white;
+color: red;
+letter-spacing: 2px;
+}
+.bonusCode {
+background-color:#FFFEE9;
+border-bottom:1px solid #DDDDDD;
+border-left:1px solid #FFFFFF;
+border-top:1px solid #FFFFFF;
+color:#FF0000;
+letter-spacing:2px;
+}
+
+.m_1, .g_1 {
+background:none repeat scroll 0 0 #FFE2BC;
+color:#CF8C8C;
+}
+
+.B_1 {
+background:url("../img/ball_bg.gif") no-repeat scroll center -36px #FFE2BC;
+}
+.m_2, .g_2 {
+background:none repeat scroll 0 0 #EAF7FF;
+color:#32A6E4;
+}
+
+.B_2 {
+background:url("../img/ball_bg.gif") no-repeat scroll center -18px #EAF7FF;
+}
+
+.m_3, .g_3 {
+background:none repeat scroll 0 0 #E9FAD8;
+color:#8E8E8E;
+}
+.M_4, .G_4 {
+background-color: #F7E7F7;
+color: #978397;
+}
+.M_5, .G_5 {
+background-color: #D0E7E7;
+color: #7B9595;
+}
+.M_6, .G_6 {
+background-color: #FBE5E5;
+color: #9C7B7B;
+}
+.M_7, .G_7 {
+background-color: #FEDCD4;
+color: #FF957B;
+}
+.M_8, .G_8 {
+background-color: #E9DEFF;
+color: #967CCB;
+}
+.M_9, .G_9 {
+background-color: #FEDCD4;
+color: #FF7B5A;
+}
+.B_3 {
+background:url("../img/ball_bg.gif") no-repeat scroll center 0 #E9FAD8;
+}
+.B_4 {
+background: #F7E7F7 url("../img/ball_bg.gif") no-repeat 50% -54px;
+background-color: #F7E7F7;
+}
+.B_5 {
+background: #D0E7E7 url("../img/ball_bg.gif") no-repeat 50% -72px;
+background-color: #D0E7E7;
+}
+.B_51 {
+background: #FFE2BC url("../img/ball_bg2.gif") no-repeat 50% -36px;
+background-color: #FFE2BC;
+}
+.B_6 {
+background:url("../img/ball_bg.gif") no-repeat scroll center -90px #FBE5E5;
+}
+.B_7 {
+background: #FEDCD4 url("../img/ball_bg.gif") no-repeat 50% -108px;
+background-color: #FEDCD4;
+}
+.B_8 {
+background: #E9DEFF url("../img/ball_bg.gif") no-repeat 50% -126px;
+background-color: #E9DEFF;
+}
+.fgx {
+border-right:2px solid #B3B3B3;
+white-space:nowrap;
+}
+
+.B_0, .B_1, .B_2, .B_3, .B_4, .B_5, .B_6, .B_7, .B_8, .B_9, .B_10, .B_11, .B_12 {
+border-color:#FFFFFF #CCCCCC #CCCCCC #FFFFFF;
+border-style:solid;
+border-width:1px;
+color:#FFFFFF;
+font:12px/18px "Arial Black",Gadget,sans-serif;
+height:18px;
+text-align:center;
+width:20px;
+}
+.B_12, .B_0 {
+background: #CFECB4 url("../img/ball_bg.gif") no-repeat 50% -198px;
+background-color: #CFECB4;
+}
+.B_50, .B_51, .B_52, .B_53, .B_54, .B_55, .B_56, .B_57, .B_58, .B_59 {
+border-bottom: 1px solid #CCC;
+border: 1px solid;
+border-right: 1px solid #CCC;
+color: white;
+font-family: 'Arial black', Gadget, sans-serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 18px;
+text-align: center;
+}
+
+.M_0, .M_3, .G_3, .M_2, .m_1, .M_4, .M_5, .M_6, .M_7, .M_8, .M_9, .M_10, .M_11, .M_12, .G_1, .G_2, .G_3, .G_4, .G_5, .G_6, .G_7, .G_8, .G_9, .G_10, .G_11, .G_12, .C_1 {
+border-color:#FFFFFF #CCCCCC #CCCCCC #FFFFFF;
+border-style:solid;
+border-width:1px;
+height:18px;
+width:20px;
+}
+.M_12, .G_12, .M_0, .G_0 {
+background-color: #CFECB4;
+color: #7B9C5A;
+}
+
+.help {
+background-color:#FAFCFF;
+border-bottom:1px solid #777F8D;
+line-height:20px;
+overflow:hidden;
+padding:10px;
+text-align:left;
+}
+
+.tdbck td {
+background:none repeat scroll 0 0 #B3B3B3;
+height:1px;
+}
+.tbr, a.tbr:link, a.tbr:visited, .tbr a:link, .tbr a:visited {
+color: #AA0001;
+}
+
+

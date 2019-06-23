@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.sys.DistributionLock" table="SYS_DISTRIBUTION_LOCK">
+        <id name="id" column="ID">
+			<generator class="sequence">
+                <param name="sequence">SEQ_SYS_DISTRIBUTION_LOCK</param>
+            </generator>
+		</id>
+        <property name="name" column="NAME" type="java.lang.String" length="50"/>
+        <property name="code" column="CODE" type="java.lang.String" length="50"/>
+        <property name="userName" column="USER_NAME" type="java.lang.String" length="50"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="interval" column="INTERVAL" type="java.lang.Long" length="10"/>
+        <property name="stop" column="STOP" type="java.lang.Integer" length="1"/>
+    </class>
+</hibernate-mapping>

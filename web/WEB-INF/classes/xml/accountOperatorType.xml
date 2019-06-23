@@ -1,0 +1,27 @@
+<accountOperator>
+    <first type="0" name="收入">
+        <second type="01" name="退款">
+            <third type="00" operator="orderFailure" name="出票失败" nickName="收入-投注失败"/>
+        </second>
+        <second type="02" name="返奖">
+            <third type="00" operator="bonus" name="返奖" nickName="收入-派奖"/>
+        </second>
+        <second type="04" name="返佣">
+            <third type="00" operator="commission" name="返佣" nickName="收入-出票返佣"/>
+        </second>
+        <second type="05" name="额度加">
+            <third type="00" operator="editAccount" name="额度加" nickName="收入-额度加"/>
+        </second>
+    </first>
+
+
+    <first type="1" name="支出">
+        <second type="00" name="购彩">
+            <third type="00" operator="order" name="购买" nickName="支出-购买"/>
+        </second>
+        <second type="04" name="额度减">
+            <third type="00" operator="editAccount" name="额度减" nickName="支出-额度减"/>
+        </second>
+    </first>
+
+</accountOperator>

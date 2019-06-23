@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.WeightRule" table="TMS_WEIGHT_RULE">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_WEIGHT_RULE</param>
+            </generator>
+        </id>
+        
+		<property name="timeId" column="TIME_ID" type="java.lang.Integer"/>
+		<property name="param" column="PARAM" type="java.lang.String" length="10"/>
+		<property name="amount" column="AMOUNT" type="java.lang.Double"  length="15" scale="2"/>
+		<property name="postCode" column="POST_CODE" type="java.lang.String" length="2"/>
+		<property name="userCode" column="USER_CODE" type="java.lang.String" length="45"/>
+        <property name="createTime" column="CREATE_TIME" type="java.util.Date"/>
+        <property name="updateTime" column="UPDATE_TIME" type="java.util.Date"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String"/>
+        
+    </class>
+</hibernate-mapping>

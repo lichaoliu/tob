@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.tms.MainIssue" table="TMS_MAIN_ISSUE">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_TMS_MAIN_ISSUE</param>
+            </generator>
+        </id>
+        <property name="lotteryCode" column="LOTTERY_CODE" type="java.lang.String" length="3"/>
+        <property name="name" column="NAME" type="java.lang.String" length="20"/>
+        <property name="startTime" column="START_TIME" type="java.util.Date"/>
+        <property name="simplexTime" column="SIMPLEX_TIME" type="java.util.Date"/>
+        <property name="duplexTime" column="DUPLEX_TIME" type="java.util.Date"/>
+        <property name="endTime" column="END_TIME" type="java.util.Date"/>
+        <property name="status" column="STATUS" type="java.lang.Integer" length="1"/>
+        <property name="sendStatus" column="SEND_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="bonusTime" column="BONUS_TIME" type="java.util.Date"/>
+        <property name="sendBonusTime" column="SEND_BONUS_TIME" type="java.util.Date" />
+        <property name="bonusStatus" column="BONUS_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="centerBonusStatus" column="CENTER_BONUS_STATUS" type="java.lang.Integer" length="1"/>
+        <property name="bonusNumber" column="BONUS_NUMBER" type="java.lang.String" length="100"/>
+        <property name="bonusTotal" column="BONUS_TOTAL" type="java.lang.Double"/>
+        <property name="prizePool" column="PRIZE_POOL" type="java.lang.String" length="50"/>
+        <property name="bonusClass" column="BONUS_CLASS" type="java.lang.String" length="1024"/>
+        <property name="saleTotal" column="SALE_TOTAL" type="java.lang.String" length="45"/>
+        <property name="globalSaleTotal" column="GLOBAL_SALE_TOTAL" type="java.lang.String" length="45"/>
+        <property name="backup1" column="BACKUP1" type="java.lang.String" length="4000"/>
+        <property name="backup2" column="BACKUP2" type="java.lang.String" length="45"/>
+        <property name="backup3" column="BACKUP3" type="java.lang.String" length="45"/>
+        <property name="operatorsAward" column="OPERATORS_AWARD" type="java.lang.Integer"/>
+
+    </class>
+</hibernate-mapping>

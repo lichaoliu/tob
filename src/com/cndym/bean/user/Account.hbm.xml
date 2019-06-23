@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cndym.bean.user.Account" table="USER_ACCOUNT">
+        <id name="id" column="ID">
+            <generator class="sequence">
+                <param name="sequence">SEQ_USER_ACCOUNT</param>
+            </generator>
+        </id>
+        <property name="userCode" column="USER_CODE" type="java.lang.String" length="20"/>
+        <property name="bonusAmount" column="BONUS_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="rechargeAmount" column="RECHARGE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="presentAmount" column="PRESENT_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="freezeAmount" column="FREEZE_AMOUNT" type="java.lang.Double" length="15" scale="2"/>
+        <property name="bonusTotal" column="BONUS_TOTAL" type="java.lang.Double" length="15" scale="2"/>
+        <property name="rechargeTotal" column="RECHARGE_TOTAL" type="java.lang.Double" length="15" scale="2"/>
+        <property name="presentTotal" column="PRESENT_TOTAL" type="java.lang.Double" length="15" scale="2"/>
+        <property name="payTotal" column="PAY_TOTAL" type="java.lang.Double" length="15" scale="2"/>
+        <property name="drawTotal" column="DRAW_TOTAL" type="java.lang.Double" length="15" scale="2"/>
+        <property name="score" column="SCORE" type="java.lang.Integer"/>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,170 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:amq="http://activemq.apache.org/schema/core" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+     http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+     http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+
+	<description>JMS settings</description>
+	<!-- ActiveMQ 连接工厂 -->
+	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="${JMS.BROKER.URL}" />
+		<property name="useAsyncSend" value="true" />
+	</bean>
+
+	<!-- Spring Caching 连接工厂 -->
+	<bean id="cachingConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="targetConnectionFactory" ref="connectionFactory" />
+		<property name="sessionCacheSize" value="${JMS.SESSIONCACHE.SIZE}" />
+	</bean>
+
+	<!-- Queue定义 -->
+
+	<!--Business Gateway queue name -->
+	<amq:queue id="gateway_to_control_order" physicalName="${jms.gateway.to.control.order}" />
+	<amq:queue id="gateway_upload_to_control_order" physicalName="${jms.gateway.upload.to.control.order}" />
+	<amq:queue id="gateway_jingji_upload_to_control_order" physicalName="${jms.gateway.jingji.upload.to.control.order}" />
+	<amq:queue id="gateway_date_out_messages" physicalName="${jms.gateway.date.out.messages}" />
+	<amq:queue id="send_to_client_bonus_messages" physicalName="${jms.send.to.client.bonus.messages}" />
+	<amq:queue id="send_to_client_issue_messages" physicalName="${jms.send.to.client.issue.messages}" />
+	<amq:queue id="send_to_client_programs_messages" physicalName="${jms.send.to.client.programs.messages}" />
+	<amq:queue id="send_to_client_bonus_info_messages" physicalName="${jms.send.to.client.bonus.info.messages}" />
+	<amq:queue id="send_to_client_ticket_notice_messages" physicalName="${jms.send.to.client.ticket.notice.messages}" />
+
+	<!-- Spring JMS Template -->
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="cachingConnectionFactory" />
+		<!-- 使 deliveryMode, priority, timeToLive设置生效 -->
+		<property name="explicitQosEnabled" value="true" />
+		<!-- 设置PERSISTENT模式, 默认为NON_PERSISTENT -->
+		<!-- JMSDeliveryMode NON_PERSISTENT 非持久化 表示消息发往JMS消息服务器之后，保存在内存中，不做持久化； PERSISTENT 持久化 消息发往JMS消息服务器之后，持久化数据。以保证消息服务器拓机造成的消息丢失 -->
+		<property name="deliveryPersistent" value="false" />
+		<!-- 设置优先级, 默认为4 -->
+		<property name="priority" value="9" />
+	</bean>
+	
+	<!--&lt;!&ndash;出票通知监听&ndash;&gt; -->
+	<bean id="sendToClientTicketNoticeMessageContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="send_to_client_ticket_notice_messages" />
+		<property name="messageListener" ref="sendToClientTicketNoticeMessageListener" />
+		<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+		<property name="concurrentConsumers" value="5" />
+		<property name="maxConcurrentConsumers" value="10" />
+		<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+		<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE" />
+		<property name="sessionTransacted" value="true" />
+	</bean>
+
+
+	<!--&lt;!&ndash;订单监听&ndash;&gt; -->
+	<!--<bean id="orderMessageContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+		<!--<property name="connectionFactory" ref="connectionFactory" /> -->
+		<!--<property name="destination" ref="gateway_to_control_order" /> -->
+		<!--<property name="messageListener" ref="gateWayOrderMessageListener" /> -->
+		<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+		<!--<property name="concurrentConsumers" value="5" /> -->
+		<!--<property name="maxConcurrentConsumers" value="10" /> -->
+		<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+		<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE" /> -->
+		<!--<property name="sessionTransacted" value="true" /> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;订单监听&ndash;&gt; -->
+	<!--<bean id="orderMessageForUploadContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="gateway_upload_to_control_order"/> -->
+	<!--<property name="messageListener" ref="gateWayOrderForUploadMessageListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;订单监听&ndash;&gt; -->
+	<!--<bean id="orderMessageForJingJiUploadContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="gateway_jingji_upload_to_control_order"/> -->
+	<!--<property name="messageListener" ref="gateWayOrderForJingJiUploadMessageListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;外发数据监听&ndash;&gt; -->
+	<!--<bean id="dataOutMessageContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="gateway_date_out_messages"/> -->
+	<!--<property name="messageListener" ref="gateWayDataOutMessageListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;联盟返奖数据监听&ndash;&gt; -->
+	<!--<bean id="sendClientBonusMessageContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="send_to_client_bonus_messages"/> -->
+	<!--<property name="messageListener" ref="sendToClientBonusMessagesListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;联盟开奖数据监听&ndash;&gt; -->
+	<!--<bean id="sendClientBonusInfoMessageContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="send_to_client_bonus_info_messages"/> -->
+	<!--<property name="messageListener" ref="sendToClientBonusInfoMessagesListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;联盟期次数据监听&ndash;&gt; -->
+	<!--<bean id="sendClientIssueMessageContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="send_to_client_issue_messages"/> -->
+	<!--<property name="messageListener" ref="sendToClientIssueMessagesListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+	<!--&lt;!&ndash;外发数据监听&ndash;&gt; -->
+	<!--<bean id="sendClientProgramesMessageContainer" -->
+	<!--class="org.springframework.jms.listener.DefaultMessageListenerContainer"> -->
+	<!--<property name="connectionFactory" ref="connectionFactory"/> -->
+	<!--<property name="destination" ref="send_to_client_programs_messages"/> -->
+	<!--<property name="messageListener" ref="sendToClientProgramsMessagesListener"/> -->
+	<!--&lt;!&ndash;初始5个Consumer, 可动态扩展到10 &ndash;&gt; -->
+	<!--<property name="concurrentConsumers" value="5"/> -->
+	<!--<property name="maxConcurrentConsumers" value="10"/> -->
+	<!--&lt;!&ndash;设置消息确认模式为Client &ndash;&gt; -->
+	<!--<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"/> -->
+	<!--<property name="sessionTransacted" value="true"/> -->
+	<!--</bean> -->
+
+</beans>

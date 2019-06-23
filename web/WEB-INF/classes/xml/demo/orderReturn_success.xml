@@ -1,0 +1,20 @@
+<messages>
+    <header>
+        <sid><![CDATA[8001]]></sid>
+        <cmd><![CDATA[001]]></cmd>
+        <digestType><![CDATA[md5]]></digestType>
+        <digest><![CDATA[95f9a7c92c3483d55b43b1f15cd864b6]]></digest>
+    </header>
+    <body>
+        <response code="0000" msg="系统处理成功">
+            <!-- 商户批次号 -->
+            <order orderId="041351476495178422800343025360">
+                <!-- ticketId:商户票号 id:平台票号 -->
+                <ticket ticektId="01234567890123456779" sysId="031351476497167286577732182215"></ticket>
+                <ticket ticektId="01234567890123456778" sysId="031351476497168774246860127712"></ticket>
+                <ticket ticektId="01234567890123456777" sysId="031351476497169323283201760236"></ticket>
+                <ticket ticektId="01234567890123456776" sysId="031351476497169634433543381534"></ticket>
+            </order>
+        </response>
+    </body>
+</messages>
